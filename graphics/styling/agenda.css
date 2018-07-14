@@ -1,0 +1,48 @@
+/* AGENDA MAIN LAYOUT */
+
+body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arimo', sans-serif;
+}
+
+#agenda-layout
+{
+  width: 98%;
+  margin: 0 1%;
+  height: 100%;
+}
+
+#agenda-layout table
+{
+    width: 100%;
+    height: 100%;
+      border-collapse: collapse;
+}
+
+#agenda-layout table td
+{
+    padding: 5px 0;
+}
+
+#agenda-layout table th
+{
+  border: 1px solid black;
+  padding: 5px 0;
+}
+
+#agenda-layout table td
+{
+    border: 1px solid black;
+    height: 100%;
+}
+
+
+
+#agenda-layout tr td:first-child
+{
+    text-align: center;
+}
