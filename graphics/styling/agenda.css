@@ -25,7 +25,7 @@ body
 
 #agenda-layout table td
 {
-    padding: 5px 0;
+
     text-align: center;
 }
 
@@ -34,8 +34,6 @@ body
     border: 1px solid black;
     padding: 5px 0;
 }
-
-
 
 #agenda-layout table tr
 {
@@ -47,7 +45,7 @@ body
 #agenda-layout table td
 {
     border-left: 1px solid black;
-    
+
 }
 
 #agenda-layout table tr:nth-child(even)
@@ -61,4 +59,10 @@ body
 #agenda-layout tr td:first-child
 {
     text-align: center;
+}
+
+.appointment
+{
+    width: 100%;
+    border-radius: 3px;
 }
