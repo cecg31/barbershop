@@ -25,33 +25,41 @@ body
 
 #agenda-layout table td
 {
-
     text-align: center;
 }
 
 #agenda-layout table th
 {
-    border: 1px solid black;
+    border: 1px solid #4f4f4f;
     padding: 5px 0;
+    background-color: #014248;
+    color: white;
+}
+
+#agenda-layout table td:first-child
+{
+
+    background-color: #5A8387;
+    color: white;
+    height: 24px;
+    border: none;
 }
 
 #agenda-layout table tr
 {
-    border: 1px solid black;
-    border-bottom: none;
     height: 100%;
+      border-left: 1px solid #4f4f4f;
 }
 
 #agenda-layout table td
 {
-    border-left: 1px solid black;
-
+    border-top: 1px solid #c9c9c9;
+    border-left: 1px dotted #c9c9c9 !important;
 }
 
-#agenda-layout table tr:nth-child(even)
+#agenda-layout table tr:nth-child(even) td
 {
-
-    border-top: none;
+    border-top: 1px dotted #c9c9c9;
     height: 100%;
 }
 
@@ -59,10 +67,40 @@ body
 #agenda-layout tr td:first-child
 {
     text-align: center;
+    border-top: 1px solid #c9c9c9;
 }
+
 
 .appointment
 {
     width: 100%;
     border-radius: 3px;
+    padding: 2px 0;
+    min-height: 24px;
+    margin: 1px 0;
+    cursor: pointer;
+}
+
+.ap1
+{
+   background-color: #346d91;
+   color: white;
+}
+
+.ap2
+{
+   background-color: #91346d;
+   color: white;
+}
+
+.ap3
+{
+   background-color: #339682;
+   color: white;
+}
+
+.ap4
+{
+   background-color: #f4426e;
+   color: white;
 }
