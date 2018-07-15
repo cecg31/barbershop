@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../graphics/styling/agenda.css">
     <link href="https://fonts.googleapis.com/css?family=Arimo:400,700" rel="stylesheet">
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Agenda</title>
   </head>
   <body>
@@ -20,10 +22,10 @@
               <th width="12%">Domingo</th>
             </thead>
             <tbody>
-              <tr>
+              <tr hour="7">
                 <td>07:00</td>
-                <td> <div style="height:30%; background-color: rgba(115,115,115, 0.5)">Corte Masculino</div>
-                  <div style="height:80%; background-color: rgba(3,75,45, 0.5)">Permanente</div> </td>
+                <td> <div style=" background-color: rgba(115,115,115, 0.5)">Corte Masculino</div>
+                  </td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -31,7 +33,8 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="730">
+                <td>07:30</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -39,8 +42,8 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td> </tr>
-              <tr>
+              </tr>
+              <tr hour="8">
                 <td>08:00</td>
                 <td></td>
                 <td></td>
@@ -50,7 +53,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="830">
+                <td>08:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="background-color: red; color:white;"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="9">
                 <td>09:00</td>
                 <td></td>
                 <td></td>
@@ -60,7 +73,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="930">
+                <td>09:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="10">
                 <td>10:00</td>
                 <td></td>
                 <td></td>
@@ -70,7 +93,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1030">
+                <td>10:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="11">
                 <td>11:00</td>
                 <td></td>
                 <td></td>
@@ -80,7 +113,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1130">
+                <td>11:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="12">
                 <td>12:00</td>
                 <td></td>
                 <td></td>
@@ -90,7 +133,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1230">
+                <td>12:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="13">
                 <td>13:00</td>
                 <td></td>
                 <td></td>
@@ -100,7 +153,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1330">
+                <td>13:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="14">
                 <td>14:00</td>
                 <td></td>
                 <td></td>
@@ -110,7 +173,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1430">
+                <td>14:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="15">
                 <td>15:00</td>
                 <td></td>
                 <td></td>
@@ -120,7 +193,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1530">
+                <td>15:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="16">
                 <td>16:00</td>
                 <td></td>
                 <td></td>
@@ -130,7 +213,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1630">
+                <td>16:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="17">
                 <td>17:00</td>
                 <td></td>
                 <td></td>
@@ -140,7 +233,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1730">
+                <td>17:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="18">
                 <td>18:00</td>
                 <td></td>
                 <td></td>
@@ -150,7 +253,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1830">
+                <td>18:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="19">
                 <td>19:00</td>
                 <td></td>
                 <td></td>
@@ -160,7 +273,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="1930">
+                <td>19:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="20">
                 <td>20:00</td>
                 <td></td>
                 <td></td>
@@ -170,7 +293,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="2030">
+                <td>20:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="21">
                 <td>21:00</td>
                 <td></td>
                 <td></td>
@@ -180,7 +313,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="2130">
+                <td>21:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="22">
                 <td>22:00</td>
                 <td></td>
                 <td></td>
@@ -190,7 +333,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="2230">
+                <td>22:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="23">
                 <td>23:00</td>
                 <td></td>
                 <td></td>
@@ -200,7 +353,17 @@
                 <td></td>
                 <td></td>
               </tr>
-              <tr>
+              <tr hour="2330">
+                <td>23:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr hour="00">
                 <td>00:00</td>
                 <td></td>
                 <td></td>
@@ -213,5 +376,18 @@
             </tbody>
           </table>
       </div>
+
+        <script type="text/javascript">
+
+            $( "tr" ).each(function() {
+            var hora = $(this).attr('hour');
+            if(hora == 1930)
+            {
+                $(this).find('td:nth-child(2)').html('Corte Masculino');
+            }
+            });
+
+        </script>
+
   </body>
 </html>
