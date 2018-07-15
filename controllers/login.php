@@ -12,19 +12,18 @@
 	    <div class="row">
 	        <div class="col-md-offset-4 col-md-4">
 	            <div class="form-login">
-	            <img src="../graphics/images/logo.jpg" alt="Logo">
-	            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="nome de utilizador" />
-	            </br>
-	            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
-	            </br>
-	            <div class="wrapper">
-	            <span class="group-btn">     
-	                <a href="#" class="btn btn-primary btn-md">Entrar <i class="fa fa-sign-in"></i></a>
-	            </span>
-	            </div>
-	            </div>
-        
-	        </div>
-	    </div>
-	</div>
-</div>
+		            <img src="../graphics/images/logo.jpg" alt="Logo">
+		            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="nome de utilizador" />
+		            </br>
+		            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
+		            </br>
+		            <div class="wrapper">
+			            <span class="group-btn">     
+			                <a href="#" class="btn btn-primary btn-md">Entrar <i class="fa fa-sign-in"></i></a>
+			            </span>
+		            </div><!-- wrapper -->
+				</div><!-- form-login -->
+			</div><!-- col-md-offset-4 col-md-4 -->
+        </div><!-- row -->
+    </div><!-- container -->
+</div><!-- login -->
