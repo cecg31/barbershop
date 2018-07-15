@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../graphics/styling/style.css" type="text/css" media="screen">
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -12,7 +12,7 @@
 	    <div class="row">
 	        <div class="col-md-offset-4 col-md-4">
 	            <div class="form-login">
-	            <img src="img/logo.jpeg" alt="Logo">
+	            <img src="../graphics/images/logo.jpg" alt="Logo">
 	            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="nome de utilizador" />
 	            </br>
 	            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
