@@ -3,6 +3,8 @@
     body {
         margin-top: 50px;
         background-color: #f2f2f2;
+        background-image: url('../images/back.jpeg');
+        background-size: cover;
     }
     /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
 }

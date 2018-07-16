@@ -1,0 +1,15 @@
+.tittle_section
+{
+	color: #224266;
+}
+
+table tr:hover
+{
+	cursor: pointer;
+	background-color: #c9e0ef !important ; 
+}
+
+.selected
+{
+	background-color: rgb(1, 118, 161) !important;
+}
