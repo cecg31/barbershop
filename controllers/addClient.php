@@ -25,17 +25,27 @@ if (isset($_FILES)) {
 	$email = $_POST['email'];
 	$contacto = $_POST['phone'];
 	$nif = $_POST['nif'];
+	$notificacao = $_POST['notificacao'];
 	
 	$imagem = $_FILES['image']['name'];
 	$imagemNome  = preg_replace('/[^a-zA-Z0-9_ -]/s','',$imagem);
+	//
+	// echo $nome;
+	// echo $aniversario;
+	// echo $morada;
+	// echo $email;
+	// echo $contacto;
+	// echo $nif;
+	// echo "here:" . $notificacao;
+	// echo $imagem;
+	// echo $imagemNome;
 	
-	echo $nome;
-	echo $aniversario;
-	echo $morada;
-	echo $email;
-	echo $contacto;
-	echo $nif;
-	echo $imagem;
-	echo $imagemNome;
+	require_once 'basedados.php';
+	
+	$query ="INSERT INTO `clients` ( `name`, `birth_date`, `address`, `email`, `phone`, `photo`, `nif`, `notification`, `date_add`)
+VALUES
+	('$nome', '$aniversario', '$morada', '$email', '$contacto', '$imagemNome', '$nif', '$notificacao', 'CURRENT_TIMESTAMP');
+";
+	$executar_query = mysqli_query($database, $query);
 
 ?>

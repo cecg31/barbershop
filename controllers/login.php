@@ -18,7 +18,7 @@
 		            </br>
 		            <input type="password" name="userpassword" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
 		            </br>
-				</form>
+					</form>
 		            <div class="wrapper">
 			            <span class="group-btn">     
 			                <a href="#" class="btn btn-primary btn-md" onclick="requestLogin()">Entrar <i class="fa 								fa-sign-in"></i></a>

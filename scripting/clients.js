@@ -11,7 +11,17 @@
 		        type: 'POST',
 		        data: formData,
 		        success: function (data) {
-		            alert(data)
+					$.confirm({
+					    title: 'Cliente inserido com sucesso!!',
+					    content: 'Something went downhill, this may be serious',
+						 icon: 'glyphicon glyphicon-ok',
+					    type: 'green',
+					    typeAnimated: true,
+					    buttons: {
+					        close: function () {
+					        }
+					    }
+					});
 		        },
 		        cache: false,
 		        contentType: false,
