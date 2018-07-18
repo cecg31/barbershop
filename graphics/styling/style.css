@@ -65,6 +65,9 @@ h4 {
 .btn-primary  {
     background-color: #a84d4d !important;
     border-color: #914141 !important;
+    width: 38%;
+    padding: 4%;
+    border-radius: 30px;
 }
 
 .btn-primary:hover {

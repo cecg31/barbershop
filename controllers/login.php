@@ -3,7 +3,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+<script src="../scripting/login.js" type="text/javascript" charset="utf-8"></script>
 
 
 <div class="login">
@@ -13,13 +13,15 @@
 	        <div class="col-md-offset-4 col-md-4">
 	            <div class="form-login">
 		            <img src="../graphics/images/logo.jpg" alt="Logo">
-		            <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="nome de utilizador" />
+		           <form id="login-info-form" method="post">
+				    <input type="text" name="username" id="userName" class="form-control input-sm chat-input" placeholder="nome de utilizador" />
 		            </br>
-		            <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
+		            <input type="password" name="userpassword" id="userPassword" class="form-control input-sm chat-input" placeholder="password" />
 		            </br>
+				</form>
 		            <div class="wrapper">
 			            <span class="group-btn">     
-			                <a href="#" class="btn btn-primary btn-md">Entrar <i class="fa fa-sign-in"></i></a>
+			                <a href="#" class="btn btn-primary btn-md" onclick="requestLogin()">Entrar <i class="fa 								fa-sign-in"></i></a>
 			            </span>
 		            </div><!-- wrapper -->
 				</div><!-- form-login -->
