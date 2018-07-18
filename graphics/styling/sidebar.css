@@ -107,7 +107,7 @@
         border-radius: 0;
         border-top: 1px rgba(0,0,0,.3) solid;
         overflow-y: auto;
-        background-color: #2a3033;
+        background-color: #121717;
         /*background-color: #5A6B7D;*/
         bottom: 0;
         overflow-x: hidden;
@@ -150,13 +150,14 @@
     background: -webkit-linear-gradient(red, yellow); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(red, yellow); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to top, #141414, #393939); /* Standard syntax */
+    background: linear-gradient(to top, #1D3537, #122D2F); /* Standard syntax */
     border-bottom: 1px rgba(0,0,0,.9) solid;
 }
 
 .sidebar-icon
 {
   width: 24px;
+  margin-right: 7px;
 }
 
 .navbar .nav > li > a > .label {
