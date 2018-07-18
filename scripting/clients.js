@@ -13,12 +13,14 @@
 		        success: function (data) {
 					$.confirm({
 					    title: 'Cliente inserido com sucesso!!',
-					    content: 'Something went downhill, this may be serious',
-						 icon: 'glyphicon glyphicon-ok',
+						content: '',
+						icon: 'glyphicon glyphicon-ok',
 					    type: 'green',
+						theme: 'modern',
+						backgroundDismiss: true,
 					    typeAnimated: true,
 					    buttons: {
-					        close: function () {
+					        ok: function () {
 					        }
 					    }
 					});
