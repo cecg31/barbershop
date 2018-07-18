@@ -153,6 +153,12 @@
     background: linear-gradient(to top, #141414, #393939); /* Standard syntax */
     border-bottom: 1px rgba(0,0,0,.9) solid;
 }
+
+.sidebar-icon
+{
+  width: 24px;
+}
+
 .navbar .nav > li > a > .label {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
