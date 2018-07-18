@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>VNFEvent Main</title>
+    <title>Business Manager</title>
     <meta charset="utf-8">
 </head>
 <body>
@@ -31,7 +31,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" onclick="click_load('Inicio')">
-                <img style="display:inline-block; width: 50px; border-radius: 25px;  cursor: pointer;" src="graphics/images/logomini.jpg" alt="LOGO">
+                <img style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/logomini.jpg" alt="LOGO">
                 <p>Barbearia Amorim - Gestão</p>
             </a>
         </div>
@@ -55,31 +55,31 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
                <li>
-                   <a href="#" data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/phone-number.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                   <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/phone-number.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
-                       <li><a href="#"><i class="fa fa-plus-circle"></i> Adicionar cliente</a></li>
-                       <li><a href="#"><i class="fa fa-id-card"></i> Ver Clientes</a></li>
+                       <li><label class="link-url" hashlink="addclient"><i class="fa fa-plus-circle"></i> Adicionar cliente</label></li>
+                       <li><label class="link-url" hashlink=""><i class="fa fa-id-card"></i> Ver Clientes</label></li>
                    </ul>
                </li>
                <li>
-                   <a href="#" data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                   <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-2" class="collapse">
-                       <li><a href="#"><i class="fa fa-user-plus"></i> Novo Recurso</a></li>
-                       <li><a href="#"><i class="fa fa-users"></i> Ver Recursos</a></li>
+                       <li><label class="link-url" hashlink=""><i class="fa fa-user-plus"></i> Novo Recurso</label></li>
+                       <li><label class="link-url" hashlink=""><i class="fa fa-users"></i> Ver Recursos</label></li>
                    </ul>
                </li>
                <li>
-                   <a href="#" data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/check.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                   <label data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/check.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
-                       <li><a href="#"><i class="fa fa-bookmark"></i> Nova Marcação</a></li>
-                       <li><a href="#"><i class="fa fa-window-maximize"></i> Ver Marcações</a></li>
+                       <li><label class="link-url" hashlink=""><i class="fa fa-bookmark"></i> Nova Marcação</label></li>
+                       <li><label class="link-url" hashlink=""><i class="fa fa-window-maximize"></i> Ver Marcações</label></li>
                    </ul>
                </li>
                <li>
-                   <a href="sugerencias"><img class="sidebar-icon" src="graphics/icons/calendar.png" alt=""> Agenda Semanal</a>
+                   <label class="link-url" hashlink="appointments"><img class="sidebar-icon" src="graphics/icons/calendar.png" alt=""> Agenda Semanal</label>
                </li>
                <li>
-                   <a href="faq"><img class="sidebar-icon" src="graphics/icons/settings.png" alt=""> Parâmetros</a>
+                   <label class="link-url"><img class="sidebar-icon" src="graphics/icons/settings.png" alt=""> Parâmetros</label>
                </li>
            </ul>
         </div>
@@ -105,6 +105,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/sidebar.js"></script>
+      <script src="scripting/menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
     <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAg_SrfP-HmwjHgiqLrB6i7ONe6KYmoqgQ"></script>
