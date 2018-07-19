@@ -3,7 +3,7 @@
  $host = "localhost";
  $scheme = "barbershop";
  $userdb = "root";
- $password = "root";
+ $password = "";
 
 
  $database = mysqli_connect($host, $userdb, $password, $scheme);

@@ -25,9 +25,9 @@
 
 					$array = mysqli_fetch_array($executar_query);
 
-				  /*$_SESSION['ADM_MODE'] = true;
-					$_SESSION['USERID'] = $array['id_admin'];
-					$_SESSION['USERNAME'] = $array['username'];*/
+				  /*$_SESSION['ADM_MODE'] = true;*/
+					$_SESSION['USERID'] = $array['id'];
+					$_SESSION['USERNAME'] = $array['username'];
 
 					echo 'verificado';
 			}
@@ -39,6 +39,6 @@
 	}
 
 	#Encerrar conexão
-	mysqli_close($database);
+	//mysqli_close($database);
 
 ?>
