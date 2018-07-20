@@ -18,8 +18,14 @@ $( document ).ready(function() {
 				 var src1 = 'uploads/' + data.client_photo;
 				 $("#image_upload_preview").attr("src", src1);
 					
-					$('#name').val(data.client_name); 
-			     }
+				 $('#name').val(data.client_name); 
+				 $('#data-date').val(data.client_date);
+				 $('#address').val(data.client_address); 
+				 $('#email').val(data.client_email); 
+				 $('#phone').val(data.client_phone); 
+				 $('#nif').val(data.client_nif);
+				 
+			 }
 
 				 })
 
