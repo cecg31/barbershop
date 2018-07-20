@@ -48,32 +48,29 @@ function changedURL()
    switch (toDo['view'])
    {
 
-     case 'dashboard':
-     $('#content').load('views/dashboard.html');
-     $('#main').fadeIn();
-     break;
+      case 'dashboard':
+      $('#content').load('views/dashboard.html');
+      $('#main').fadeIn();
+      break;
 
       case 'addclient':
       $('#content').load('views/cliente.html');
       $('#main').fadeIn();
       break;
 
-	  case 'view-client':
-	  $('#content').load('views/view_client.html');
-	  $('#main').fadeIn();
-	  break;
+  	  case 'view-client':
+  	  $('#content').load('views/view_client.html');
+  	  $('#main').fadeIn();
+  	  break;
 
-      case 'clients':
-
-      break;
       case 'addappointment':
 
       break;
 
-    case 'appointments-table':
-          $('#content').load('views/view_appointments.html');
-          $('#main').fadeIn();
-        break;
+      case 'appointments-table':
+      $('#content').load('views/view_appointments.html');
+      $('#main').fadeIn();
+      break;
 
 	  case 'appointments':
         $('#content').load('views/agenda.html');
@@ -84,6 +81,16 @@ function changedURL()
 	    $('#content').load('views/edit-client.html');
 	    $('#main').fadeIn();
 	  break;
+
+    case 'logout':
+	    $('#content').load('logout.php');
+	     window.location.href="index.php";
+	  break;
+
+    default:
+    $('#content').load('views/dashboard.html');
+    $('#main').fadeIn();
+    break;
 
    }
 

@@ -2,7 +2,7 @@
 <html lang="pt" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Login</title>
+		<title>Barbearia Amorim - Login</title>
 		<!-- LINKS -->
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">

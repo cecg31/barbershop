@@ -61,7 +61,7 @@ if(!isset($_SESSION['USERNAME']))
                     <!--<li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li> -->
                     <!--<li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li> -->
                     <li class="divider"></li>
-                    <li onclick="logout()"><a href="#"><i class="fa fa-fw fa-power-off"></i>Logout</a></li>
+                    <li class="link-url" hashlink="logout"><a href="#"><i class="fa fa-fw fa-power-off"></i>Logout</a></li>
                 </ul>
             </li>
         </ul>
@@ -70,7 +70,7 @@ if(!isset($_SESSION['USERNAME']))
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
                <li>
-                   <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/phone-number.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/contacts.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
                        <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/plus.png" alt=""> Adicionar cliente</label></li>
                        <li><label class="link-url" hashlink="view-client"><img class="sidebar-li-icon" src="graphics/icons/maps-and-flags.png" alt=""> Ver Clientes</label></li>
@@ -106,8 +106,12 @@ if(!isset($_SESSION['USERNAME']))
             <!-- Page Heading -->
             <div class="row" id="main" >
 
-                <div class="col-sm-12 col-md-12 well" id="content">
+                <div class="col-sm-12 col-md-12 well" >
+                  <h3 class="head-title">Registar Cliente</h3>
+                  <hr class="title-break">
+                  <div class="" id="content">
 
+                  </div>
                 </div>
 
             </div>
