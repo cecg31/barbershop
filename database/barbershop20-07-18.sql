@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.38)
 # Base de Dados: barbershop
-# Tempo de Geração: 2018-07-20 17:06:35 +0000
+# Tempo de Geração: 2018-07-20 17:28:18 +0000
 # ************************************************************
 
 
@@ -67,11 +67,7 @@ LOCK TABLES `clients` WRITE;
 
 INSERT INTO `clients` (`id_client`, `name`, `birth_date`, `address`, `email`, `phone`, `photo`, `nif`, `notification`, `date_add`)
 VALUES
-	(1,'Gonçalo','07/03/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106221.png',123123,'1','0000-00-00 00:00:00'),
-	(2,'Gonçalo','07/03/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106268.png',123123,'1','0000-00-00 00:00:00'),
-	(3,'Gonçalo','07/03/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106298.png',123123,'1','0000-00-00 00:00:00'),
-	(4,'Gonçalo','07/03/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106318.png',123123,'1','0000-00-00 00:00:00'),
-	(5,'Gonçalo','07/03/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106363.png',123123,'1','0000-00-00 00:00:00');
+	(1,'Gonçalo','07/13/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106852.png',123123,'1','0000-00-00 00:00:00');
 
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -209,6 +205,7 @@ CREATE TABLE `users` (
   `name` varchar(11) DEFAULT NULL,
   `ordered` int(11) unsigned NOT NULL,
   `visible` tinyint(1) DEFAULT '1',
+  `photo` varchar(255) DEFAULT NULL,
   `data_add` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -216,11 +213,11 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`id_user`, `name`, `ordered`, `visible`, `data_add`)
+INSERT INTO `users` (`id_user`, `name`, `ordered`, `visible`, `photo`, `data_add`)
 VALUES
-	(1,'user1',0,1,'2018-07-15 18:52:41'),
-	(2,'user2',1,1,'2018-07-15 18:53:32'),
-	(3,'user3',2,1,'2018-07-15 18:53:42');
+	(1,'user1',0,1,NULL,'2018-07-15 18:52:41'),
+	(2,'user2',1,1,NULL,'2018-07-15 18:53:32'),
+	(3,'user3',2,1,NULL,'2018-07-15 18:53:42');
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
