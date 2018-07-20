@@ -1,0 +1,10 @@
+GET SCHEDULE
+
+SELECT schedule.*, clients.name, clients.photo, users.name, services.name, services.time
+FROM schedule 
+LEFT JOIN clients 
+ON schedule.id_client = clients.id_client
+LEFT JOIN users
+ON schedule.id_user = users.id_user
+LEFT JOIN services
+ON schedule.id_service = services.id_services;
