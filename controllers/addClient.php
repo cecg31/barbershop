@@ -4,7 +4,7 @@ if (isset($_FILES)) {
         $error = false;
         $files = array();
 
-        $uploaddir = "../uploads/";
+        $uploaddir = "uploads/";
         foreach ($_FILES as $file) {
 			$imagem = $_FILES['image']['name'];
 			$imagemNome  = preg_replace('/[^a-zA-Z0-9_ -]/s','',$imagem);
@@ -28,8 +28,8 @@ if (isset($_FILES)) {
 	$notificacao = $_POST['notificacao'];
 	
 	$imagem = $_FILES['image']['name'];
-	$imagemNome  = preg_replace('/[^a-zA-Z0-9_ -]/s','',$imagem);
-	//
+	$imagemNome  = time() . ".png";
+	
 	// echo $nome;
 	// echo $aniversario;
 	// echo $morada;
