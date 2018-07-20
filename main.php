@@ -45,8 +45,8 @@ if(!isset($_SESSION['USERNAME']))
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">
-                <img style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/logomini.jpg" alt="LOGO">
+            <a class="navbar-brand" >
+                <img class="link-url" hashlink="dashboard" style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/logomini.jpg" alt="LOGO">
                 <p>Barbearia Amorim - Gestão</p>
             </a>
         </div>
@@ -107,7 +107,7 @@ if(!isset($_SESSION['USERNAME']))
             <div class="row" id="main" >
 
                 <div class="col-sm-12 col-md-12 well" id="content">
-                    <h1 id="welcome_message">Bem-vindo Administrador</h1>
+
                 </div>
 
             </div>
