@@ -7,9 +7,10 @@ if (isset($_FILES)) {
         $uploaddir = "uploads/";
         foreach ($_FILES as $file) {
 			$imagem = $_FILES['image']['name'];
-			$imagemNome  = preg_replace('/[^a-zA-Z0-9_ -]/s','',$imagem);
+			$imagemNome  = time() . ".png";
             if (move_uploaded_file($file['tmp_name'], $uploaddir . $imagemNome)) {
                 $files[] = $uploaddir . $file['name'];
+				echo "done";
             } else {
                 $error = true;
             }
@@ -26,10 +27,9 @@ if (isset($_FILES)) {
 	$contacto = $_POST['phone'];
 	$nif = $_POST['nif'];
 	$notificacao = $_POST['notificacao'];
-	
 	$imagem = $_FILES['image']['name'];
 	$imagemNome  = time() . ".png";
-	
+	echo $imagemNome;
 	// echo $nome;
 	// echo $aniversario;
 	// echo $morada;
