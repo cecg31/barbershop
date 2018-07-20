@@ -53,16 +53,27 @@ function changedURL()
       $('#main').fadeIn();
       break;
 
+	  case 'view-client':
+	  $('#content').load('views/view_client.html');
+	  $('#main').fadeIn();
+	  break;
+	  
       case 'clients':
 
       break;
       case 'addappointment':
 
       break;
-      case 'appointments':
+     
+	  case 'appointments':
         $('#content').load('views/agenda.html');
         $('#main').fadeIn();
       break;
+	  
+	  case 'edit-client':
+	    $('#content').load('views/edit-client.html');
+	    $('#main').fadeIn();
+	  break;
 
    }
 

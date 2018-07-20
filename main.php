@@ -45,7 +45,7 @@ if(!isset($_SESSION['USERNAME']))
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" onclick="click_load('Inicio')">
+            <a class="navbar-brand">
                 <img style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/logomini.jpg" alt="LOGO">
                 <p>Barbearia Amorim - Gestão</p>
             </a>
@@ -73,7 +73,7 @@ if(!isset($_SESSION['USERNAME']))
                    <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/phone-number.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
                        <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/plus.png" alt=""> Adicionar cliente</label></li>
-                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/maps-and-flags.png" alt=""> Ver Clientes</label></li>
+                       <li><label class="link-url" hashlink="view-client"><img class="sidebar-li-icon" src="graphics/icons/maps-and-flags.png" alt=""> Ver Clientes</label></li>
                    </ul>
                </li>
                <li>
