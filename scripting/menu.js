@@ -81,6 +81,8 @@ window.onhashchange = function()
 $('.link-url').on('click', function()
 {
     var link = $(this).attr('hashlink');
+    $('.active-bar').removeClass();
+    $(this).addClass('active-bar');
     window.location.hash = 'view=' + link;
 
 });

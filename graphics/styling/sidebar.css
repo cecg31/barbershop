@@ -117,7 +117,7 @@
     .side-nav>li>label {
         width: 225px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        color: #9d9d9d !important;
+        color: #9d9d9d;
         border-bottom: 1px rgba(0,0,0,.1) solid;
         padding: 10px 15px;
         font-weight: normal;
@@ -146,7 +146,7 @@
     cursor: pointer;
     /*color: #999;*/
     font-weight: normal;
-    color: #dbdbdb !important;
+    color: #dbdbdb ;
 }
 
 .side-nav>li>ul>li>label:hover {
@@ -167,6 +167,18 @@
 {
   width: 24px;
   margin-right: 7px;
+}
+
+.sidebar-li-icon
+{
+  width: 16px;
+  margin-right: 7px;
+}
+
+.active-bar
+{
+  background-color: #374551 !important;
+  color: #fff !important;
 }
 
 .navbar .nav > li > label > .label {

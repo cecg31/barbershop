@@ -14,10 +14,6 @@ if(!isset($_SESSION['USERNAME']))
 <head>
     <title>Business Manager</title>
     <meta charset="utf-8">
-</head>
-<body>
-
-
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,6 +23,15 @@ if(!isset($_SESSION['USERNAME']))
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
     <link rel="stylesheet" type="text/css" href="graphics/styling/jquery-clockpicker.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" id="bootstrap-css">
+    <!------ Include the above in your HEAD tag ---------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <!--jconfirm cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+</head>
+<body>
 
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
@@ -68,22 +73,22 @@ if(!isset($_SESSION['USERNAME']))
                <li>
                    <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/phone-number.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
-                       <li><label class="link-url" hashlink="addclient"><i class="fa fa-plus-circle"></i> Adicionar cliente</label></li>
-                       <li><label class="link-url" hashlink=""><i class="fa fa-id-card"></i> Ver Clientes</label></li>
+                       <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/plus.png" alt=""> Adicionar cliente</label></li>
+                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/maps-and-flags.png" alt=""> Ver Clientes</label></li>
                    </ul>
                </li>
                <li>
                    <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-2" class="collapse">
-                       <li><label class="link-url" hashlink=""><i class="fa fa-user-plus"></i> Novo Recurso</label></li>
-                       <li><label class="link-url" hashlink=""><i class="fa fa-users"></i> Ver Recursos</label></li>
+                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/plus.png" alt=""> Novo Recurso</label></li>
+                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/worker.png" alt=""> Ver Recursos</label></li>
                    </ul>
                </li>
                <li>
                    <label data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/check.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
-                       <li><label class="link-url" hashlink=""><i class="fa fa-bookmark"></i> Nova Marcação</label></li>
-                       <li><label class="link-url" hashlink=""><i class="fa fa-window-maximize"></i> Ver Marcações</label></li>
+                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/wall-calendar.png" alt=""> Nova Marcação</label></li>
+                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/stats-1.png" alt=""> Ver Marcações</label></li>
                    </ul>
                </li>
                <li>
