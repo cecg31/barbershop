@@ -10,7 +10,6 @@ body
 }*/
 
 
-
 #agenda-layout
 {
   width: 100%;
@@ -32,17 +31,28 @@ body
 
 #agenda-layout table th
 {
-    border: 1px solid #4f4f4f !important;
+    border: 1px solid #f5f5f5 !important;
     padding: 5px 0 !important;
-    background-color: #014248 !important;
+    background-color: rgba(6, 45, 27, 0.8) !important;
     color: white !important;
     text-align: center !important;
+    border-bottom: none !important;
+}
+
+#agenda-layout table th:first-child
+{
+    border-right: 1px solid #c9c9c9 !important;
+}
+
+#agenda-layout table th:last-child
+{
+    border-right: 1px solid #c9c9c9 !important;
 }
 
 #agenda-layout table td:first-child
 {
 
-    background-color: #5A8387;
+    background-color: rgba(6, 45, 27, 0.6);
     color: white;
     height: 24px;
     border: none;
@@ -51,18 +61,17 @@ body
 #agenda-layout table tr
 {
     height: 100%;
-      border-left: 1px solid #4f4f4f;
+    border-left: 1px solid #fff;
 }
 
 #agenda-layout table td
 {
-    border-top: 1px solid #c9c9c9;
-    border-left: 1px dotted #c9c9c9 !important;
+    
 }
 
 #agenda-layout table tr:nth-child(even) td
 {
-    border-top: 1px dotted #c9c9c9;
+    border-top: none;
     height: 100%;
 }
 
@@ -71,6 +80,11 @@ body
 {
     text-align: center;
     border-top: 1px solid #c9c9c9;
+}
+
+#agenda-layout tr td:last-child
+{
+    border-right: 1px solid #c9c9c9;
 }
 
 
