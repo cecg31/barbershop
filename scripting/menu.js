@@ -48,6 +48,11 @@ function changedURL()
    switch (toDo['view'])
    {
 
+     case 'dashboard':
+     $('#content').load('views/dashboard.html');
+     $('#main').fadeIn();
+     break;
+
       case 'addclient':
       $('#content').load('views/cliente.html');
       $('#main').fadeIn();

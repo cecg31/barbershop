@@ -14,7 +14,7 @@ function requestLogin()
 
                 setTimeout(function(){
 
-                  window.location.href="main.php";
+                  window.location.href="main.php#view=dashboard";
 
                 }, 1500);
        }
