@@ -27,3 +27,21 @@ function requestLogin()
 
      });
 }
+
+$( document ).ready(function() {
+
+  $("#username").keypress(function(e) {
+    if(e.which == 13)
+    {
+      $('#userpassword').focus();
+    }
+});
+
+$("#userpassword").keypress(function(e) {
+  if(e.which == 13)
+  {
+      $('#loginbutton').click();
+  }
+});
+
+});
