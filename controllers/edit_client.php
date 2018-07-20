@@ -17,6 +17,7 @@ $id_client = $_GET['id_client'];
 				  $client['client_phone'] = $row['phone'];
 				  $client['client_nif'] = $row['nif'];
 				  $client['client_notification'] = $row['nome'];
+				  $client['client_notification_value'] = $row['notification'];
 				  $client['client_photo'] = $row['photo'];
 
 	            }
