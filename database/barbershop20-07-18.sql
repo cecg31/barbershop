@@ -7,10 +7,10 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.38)
 # Base de Dados: barbershop
-# Tempo de Geração: 2018-07-20 17:28:18 +0000
+# Tempo de Geração: 2018-07-20 21:00:53 +0000
 # ************************************************************
 
-use barbershop;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -55,9 +55,10 @@ CREATE TABLE `clients` (
   `address` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `phone` int(11) DEFAULT NULL,
-  `photo` varchar(255) DEFAULT NULL,
+  `photo` varchar(255) DEFAULT 'undifined.png',
   `nif` int(11) DEFAULT NULL,
   `notification` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT '1',
   `date_add` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -65,9 +66,21 @@ CREATE TABLE `clients` (
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
 
-INSERT INTO `clients` (`id_client`, `name`, `birth_date`, `address`, `email`, `phone`, `photo`, `nif`, `notification`, `date_add`)
+INSERT INTO `clients` (`id_client`, `name`, `birth_date`, `address`, `email`, `phone`, `photo`, `nif`, `notification`, `active`, `date_add`)
 VALUES
-	(1,'Gonçalo','07/13/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532106852.png',123123,'1','0000-00-00 00:00:00');
+	(1,'Gonçalo','07/04/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532115951.png',123123,'3',0,'0000-00-00 00:00:00'),
+	(2,'Carlos','07/04/2018','Fafe','carlos@teste.pt',123123,'1532116045.png',123123,'4',0,'0000-00-00 00:00:00'),
+	(3,'Teste','07/25/2018','teste','teste@aa.pt',345345,'1532116085.png',1223,'1',0,'0000-00-00 00:00:00'),
+	(4,'Teste','07/25/2018','teste','teste@aa.pt',345345,'1532116201.png',1223,'1',0,'2018-07-20 20:50:01'),
+	(5,'Teste','07/25/2018','teste','teste@aa.pt',345345,'1532116214.png',1223,'1',0,'2018-07-20 20:50:14'),
+	(6,'Gonçalo','07/04/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532118158.png',123123,'1',0,'2018-07-20 21:22:38'),
+	(7,'Gonçalo','07/10/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532119085.png',123123,'1',0,'2018-07-20 21:38:05'),
+	(8,'Gonçalo','07/04/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532119421.png',123123,'1',1,'2018-07-20 21:38:28'),
+	(9,'Gonçalo','07/05/2018','Barcelos','sofiapereira3@hotmail.com',123123,'1532119444.png',123123,'1',1,'2018-07-20 21:44:04'),
+	(10,'Gonçalo','07/16/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532119610.png',123123,'1',0,'2018-07-20 21:46:50'),
+	(11,'Gonçalo','07/04/2018','Barcelos','sofiapereira3@hotmail.com',123123,'1532119696.png',123123,'1',0,'2018-07-20 21:48:16'),
+	(12,'Gonçalo','07/18/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532119734.png',123123,'1',0,'2018-07-20 21:48:54'),
+	(13,'Gonçalo','07/18/2018','Barcelos','goncalonuno_1995@hotmail.com',123123,'undifined.png',123123,'1',1,'2018-07-20 21:52:57');
 
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
