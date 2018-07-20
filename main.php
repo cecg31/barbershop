@@ -87,7 +87,7 @@ if(!isset($_SESSION['USERNAME']))
                    <label data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/check.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
                        <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/wall-calendar.png" alt=""> Nova Marcação</label></li>
-                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/stats-1.png" alt=""> Ver Marcações</label></li>
+                       <li><label class="link-url" hashlink="appointments-table"><img class="sidebar-li-icon" src="graphics/icons/stats-1.png" alt=""> Ver Marcações</label></li>
                    </ul>
                </li>
                <li>
