@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="graphics/styling/input.css">
-
-
-
-<form class="form-horizontal" id="clients-form" method="post" role="form" enctype="multipart/form-data">
+<form class="form-horizontal" id="clients-form" method="post" action="controllers/addClient.php"  role="form" enctype="multipart/form-data">
 <div class="large-box">
 
 <div class="large-box content-centered">
@@ -68,8 +65,12 @@
 
  </div>
  <div class="large-box content-centered">
-	 <button type="submit" class="button check-btn">Inserir</button>
+	 <button type="submit" onclick="fieldVerification()" class="button check-btn">Inserir</button>
 	 <button type="button" class="button cancel-btn">Cancelar</button>
  </div>
   </div>
 </form>
+
+<script src="scripting/clients.js">
+
+</script>

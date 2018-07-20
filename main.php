@@ -8,7 +8,6 @@ if(!isset($_SESSION['USERNAME']))
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +22,7 @@ if(!isset($_SESSION['USERNAME']))
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
     <link rel="stylesheet" type="text/css" href="graphics/styling/jquery-clockpicker.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" id="bootstrap-css">
     <!------ Include the above in your HEAD tag ---------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
@@ -119,7 +118,7 @@ if(!isset($_SESSION['USERNAME']))
     <!-- /#page-wrapper -->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="js/sidebar.js"></script>
       <script src="scripting/menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
