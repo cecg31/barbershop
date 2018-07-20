@@ -6,10 +6,28 @@
 		//envia dados por ajax do formulario
 
 
-		function fieldVerification()
-		{
-			$("form#clients-form").submit();
-		}
+		$("form#clients-form").submit(function(e) { 
+	        e.preventDefault();     
+	        var formData = new FormData(this); 
+
+	        $.ajax({ 
+	            url: "controllers/addClient.php", 
+	            type: 'POST', 
+	            data: formData, 
+	            success: function (data) { 
+					swal( 'Cliente inserido com sucesso!.', 'Aguarde', 'success');
+
+		                setTimeout(function(){
+
+		                  window.location.href="main.php#view=view-client";
+
+		                }, 1500);
+	            }, 
+	            cache: false, 
+	            contentType: false, 
+	            processData: false 
+	        }); 	    
+		});
 
 		//pre-visualizar foto
 	    function readURL(input) {
@@ -24,7 +42,11 @@
 	           }
 	       }
 
-	       $("#photo").change(function () {
-	           readURL(this);
-	       });
+       $("#photo").change(function () {
+           readURL(this);
+       });
+	   
+		$('.cancel-btn').on('click', function () { 
+			window.location.hash = 'view=view-client';
+		});
 	});

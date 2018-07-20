@@ -32,6 +32,11 @@ body
 {
   text-align: center;
 }
+
+#image_upload_preview {
+	max-width:20%;
+}
+
 /* FORM-INPUT */
 .form-control-file
 {
@@ -136,6 +141,11 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
    background-color: #1e8c43;
 }
 
+.remove-btn {
+	float: right;
+	background-color: #edc721;
+	color: #fff;
+}
 
 @media(max-width:768px)
 {

@@ -5,9 +5,9 @@ $( document ).ready(function() {
 
 		$.ajax({
 
-			type: "GET",
+			 type: "GET",
 			 url: "controllers/get_client.php",
-		   	dataType: 'json',
+		   	 dataType: 'json',
 			 success: function(data)
 			 {
 				 $('#data').html('');
@@ -24,7 +24,6 @@ $( document ).ready(function() {
 										"<td>"+ data[i].client_nif +"</td> "+
 										"<td>"+ data[i].client_notification +"</td> "+
 										"<td><img src='graphics/icons/edit.png' width='24px' alt='edit'></td> "+
-					 					"<td><img src='graphics/icons/x-button.png' width='24px' alt='delete'></td></td> "+
 					 				"</tr>";
 	      		
 					$('#data').append(table_tr);
@@ -42,4 +41,5 @@ $( document ).ready(function() {
 		var id_client = $(this).attr('clientcode');
 		window.location.hash = 'view=edit-client&id_client='+id_client;
 	})
+
 });

@@ -3,7 +3,7 @@
 
 require_once 'basedados.php';
 
-$clients_data ="SELECT clients.*, notification.* FROM clients LEFT JOIN notification ON clients.notification = notification.id_notification ORDER BY id_client ASC";
+$clients_data ="SELECT clients.*, notification.* FROM clients LEFT JOIN notification ON clients.notification = notification.id_notification WHERE active = '1' ORDER BY id_client ASC";
 
 $executar_query = mysqli_query($database, $clients_data);
 
