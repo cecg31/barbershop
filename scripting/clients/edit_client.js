@@ -68,7 +68,7 @@ $( document ).ready(function() {
 
 		                 setTimeout(function(){
 
-		                   window.location.href="main.php#view=view-client";
+		                   window.location.href="main.php#view=view-clients";
 
 		                 }, 1500);
 	             },

@@ -3,21 +3,47 @@
 	color: #224266;
 }
 
-table tbody tr:hover
+.table-layout
+{
+	width: 100%;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.table-layout tbody tr:hover
 {
 	cursor: pointer;
 	background-color: #c9e0ef !important ;
 }
 
-table thead th
+.table-layout thead th:first-child
 {
+	border-top-left-radius: 5px;
+}
+
+.table-layout thead th:last-child
+{
+	border-top-right-radius: 5px;
+}
+
+.table-layout thead th
+{
+	text-align: center;
+	background-color: #1D3537;
+	padding: 10px 5px;
+	color: white;
+
+}
+
+.table-layout tbody td
+{
+	padding: 15px 5px !important;
 	text-align: center;
 }
 
-table tbody td
+.table-layout tbody tr:nth-child(even)
 {
-	padding: 15px 0 !important;
-	text-align: center;
+	background-color: #f2fcff;
 }
 
 .selected

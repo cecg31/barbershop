@@ -60,8 +60,8 @@ function changedURL()
       $('#main').fadeIn();
       break;
 
-  	  case 'view-client':
-  	  $('#content').load('views/view_client.html');
+  	  case 'view-clients':
+  	  $('#content').load('views/view_clients.html');
       $('#head-title').html('Clientes');
       $('#main').fadeIn();
   	  break;

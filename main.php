@@ -56,7 +56,7 @@ if(!isset($_SESSION['USERNAME']))
                 </a>
             </li>
             <li class="dropdown">
-                <a href="#" id='user_name_profile' class="dropdown-toggle" data-toggle="dropdown">Perfil<b class="fa fa-angle-down"></b></a>
+                <a href="#" id='user_name_profile' class="dropdown-toggle" data-toggle="dropdown">Opções <b class="fa fa-angle-down"></b></a>
                 <ul class="dropdown-menu">
                     <!--<li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li> -->
                     <!--<li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li> -->
@@ -73,7 +73,7 @@ if(!isset($_SESSION['USERNAME']))
                    <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/contacts.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
                        <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Adicionar cliente</label></li>
-                       <li><label class="link-url" hashlink="view-client"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Clientes</label></li>
+                       <li><label class="link-url" hashlink="view-clients"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Clientes</label></li>
                    </ul>
                </li>
                <li> <!-- RESOURCES -->
@@ -94,6 +94,7 @@ if(!isset($_SESSION['USERNAME']))
                    <label data-toggle="collapse" data-target="#submenu-4"><img class="sidebar-icon" src="graphics/icons/push-pin.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-4" class="collapse">
                        <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Nova Marcação</label></li>
+                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/time.png" alt=""> Encontrar Vaga</label></li>
                        <li><label class="link-url" hashlink="appointments-table"><img class="sidebar-li-icon" src="graphics/icons/wall-calendar.png" alt=""> Ver Marcações</label></li>
                    </ul>
                </li>
