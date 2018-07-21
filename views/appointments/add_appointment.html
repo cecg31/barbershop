@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="graphics/styling/input.css">
+<form class="form-horizontal" id="services-form" method="post" action="controllers/add_resources.php"  role="form" enctype="multipart/form-data">
+<div class="large-box">
+
+<div class="tab-wrap">
+
+		<div class="tab-options">
+			<ul>
+				<li class="tab-li-active" tab-toggle="1">Selecionar Cliente</li>
+				<li tab-toggle="2">Marcação</li>
+			</ul>
+		</div>
+
+		<div class="tab-list">
+
+				<div class="tab tab-active" tab-index="1">
+							<br>
+					<div id="client-info" style="display:none">
+
+
+					<div class="large-box">
+						<img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" /> <br> <br>
+					</div>
+
+					<div class="medium-box">
+
+						<div class="form-input-division">
+							<label for="firstName" class="form-input-label">Nome</label>
+							<label id="name" class="input-readonly">Carlos Emanuel Carvalho Gonçalves</label>
+						</div>
+
+						<div class="form-input-division">
+							<label for="lastName" class="form-input-label">Data de Nascimento</label>
+							<label id="data-date" class="input-readonly">09/04/1996</label>
+						</div>
+
+						<div class="form-input-division">
+							<label for="ID Number" class="form-input-label">NIF</label>
+								<label id="nif" class="input-readonly">8328691287</label>
+						</div>
+
+					</div>
+
+					<div class="medium-box">
+						<div class="form-input-division">
+						  <label for="lastName" class="form-input-label">Morada</label>
+							<label id="address" class="input-readonly">Rua das Freiras N. 18</label>
+						</div>
+						<div class="form-input-division">
+							<label for="ID Number" class="form-input-label">Email</label>
+								<label id="email" class="input-readonly">carlosecg31@hotmail.com</label>
+						</div>
+						<div class="form-input-division">
+							<label for="ID Number" class="form-input-label">Contacto</label>
+							<label id="phone" class="input-readonly">969616037</label>
+						</div>
+					</div>
+
+				</div>
+					<div id="search-for-client">
+						<table class="table-layout">
+							<thead>
+								<tr>
+									<th>-</th>
+									<th>Nome</th>
+									<th>Data de Nascimento</th>
+									<th>Morada</th>
+									<th>Email</th>
+									<th>Contacto</th>
+									<th>NIF</th>
+									<th>Notificação</th>
+									<th>-</th>
+								</tr>
+							</thead>
+							<tbody id="data">
+
+							</tbody>
+						</table>
+
+						<script src="scripting/appointments/get_client_info.js"></script>
+					</div>
+
+			</div>
+
+				<div class="tab" tab-index="2">
+					 Tab 2
+				 </div>
+
+		</div>
+
+</div>
+
+</div>
+</form>
+
+
+<script src="dists/jscolor.js"></script>
+<script type="text/javascript">
+
+			$('.tab-options ul').on('click', 'li', function()
+			{
+					var tab_to_toggle = $(this).attr('tab-toggle');
+					$('.tab-options ul li').removeClass('tab-li-active');
+					$(this).addClass('tab-li-active');
+					$('.tab').removeClass('tab-active');
+					$('.tab[tab-index="'+tab_to_toggle+'"]').addClass('tab-active');
+			});
+
+</script>

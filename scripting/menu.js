@@ -65,37 +65,37 @@ function changedURL()
       $('#head-title').html('Clientes');
       $('#main').fadeIn();
   	  break;
-	  
+
 	  case 'edit-client':
 	  $('#content').load('views/clients/edit_client.html');
 	  $('#head-title').html('Editar Dados');
 	  $('#main').fadeIn();
 	  break;
-	  
+
 	  case 'add_resources':
 	  $('#content').load('views/resources/add_resources.html');
 	  $('#head-title').html('Adicionar Recursos');
 	  $('#main').fadeIn();
 	  break;
-	  
+
 	  case 'view_resources':
 	  $('#content').load('views/resources/view_resources.html');
 	  $('#head-title').html('Recursos');
 	  $('#main').fadeIn();
 	  break;
-	  
+
 	  case 'edit_resources':
 	  $('#content').load('views/resources/edit_resources.html');
 	  $('#head-title').html('Editar Recursos');
 	  $('#main').fadeIn();
 	  break;
-	  
+
 	  case 'add_services':
 	  $('#content').load('views/services/add_services.html');
 	  $('#head-title').html('Adicionar Serviços');
 	  $('#main').fadeIn();
 	  break;
-	  
+
 	  case 'view_services':
 	  $('#content').load('views/services/view_services.html');
 	  $('#head-title').html('Serviços');
@@ -107,9 +107,11 @@ function changedURL()
 	  $('#head-title').html('Editar Serviços');
 	  $('#main').fadeIn();
 	  break;
-  
-      case 'addappointment':
 
+      case 'add_appointment':
+      $('#content').load('views/appointments/add_appointment.html');
+      $('#head-title').html('Nova Marcação');
+      $('#main').fadeIn();
       break;
 
       case 'appointments-table':
