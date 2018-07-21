@@ -74,22 +74,40 @@ function changedURL()
 	  
 	  case 'add_resources':
 	  $('#content').load('views/resources/add_resources.html');
-	  $('#head-title').html('Clientes');
+	  $('#head-title').html('Adicionar Recursos');
 	  $('#main').fadeIn();
 	  break;
 	  
 	  case 'view_resources':
 	  $('#content').load('views/resources/view_resources.html');
-	  $('#head-title').html('Clientes');
+	  $('#head-title').html('Recursos');
 	  $('#main').fadeIn();
 	  break;
 	  
 	  case 'edit_resources':
 	  $('#content').load('views/resources/edit_resources.html');
-	  $('#head-title').html('Clientes');
+	  $('#head-title').html('Editar Recursos');
+	  $('#main').fadeIn();
+	  break;
+	  
+	  case 'add_services':
+	  $('#content').load('views/services/add_services.html');
+	  $('#head-title').html('Adicionar Serviços');
+	  $('#main').fadeIn();
+	  break;
+	  
+	  case 'view_services':
+	  $('#content').load('views/services/view_services.html');
+	  $('#head-title').html('Serviços');
 	  $('#main').fadeIn();
 	  break;
 
+	  case 'edit_services':
+	  $('#content').load('views/services/edit_services.html');
+	  $('#head-title').html('Editar Serviços');
+	  $('#main').fadeIn();
+	  break;
+  
       case 'addappointment':
 
       break;

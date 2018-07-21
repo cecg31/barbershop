@@ -47,6 +47,6 @@ $(document).ready(function() {
 	});
 
 	$('.cancel-btn').on('click', function () {
-		window.location.hash = 'view=view-resources';
+		window.location.hash = 'view=view_resources';
 	});
 });

@@ -86,8 +86,8 @@ if(!isset($_SESSION['USERNAME']))
                <li> <!-- SERVICES -->
                    <label  data-toggle="collapse" data-target="#submenu-3"> <img class="sidebar-icon" src="graphics/icons/scissors.png" alt=""> Serviços <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
-                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Serviço</label></li>
-                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Serviços</label></li>
+                       <li><label class="link-url" hashlink="add_services"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Serviço</label></li>
+                       <li><label class="link-url" hashlink="view_services"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Serviços</label></li>
                    </ul>
                </li>
                <li> <!-- APPOINTMENTS -->

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.38)
 # Base de Dados: barbershop
-# Tempo de Geração: 2018-07-21 12:42:46 +0000
+# Tempo de Geração: 2018-07-21 15:02:54 +0000
 # ************************************************************
 
 
@@ -63,6 +63,15 @@ CREATE TABLE `clients` (
   PRIMARY KEY (`id_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `clients` WRITE;
+/*!40000 ALTER TABLE `clients` DISABLE KEYS */;
+
+INSERT INTO `clients` (`id_client`, `name`, `birth_date`, `address`, `email`, `phone`, `photo`, `nif`, `notification`, `active`, `date_add`)
+VALUES
+	(1,'Gonçalo','07/31/1995','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532180564.png',123123,'1',1,'2018-07-21 14:42:44');
+
+/*!40000 ALTER TABLE `clients` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump da tabela notification
@@ -169,7 +178,8 @@ VALUES
 	(7,'Gonçalo','07/04/2018','01:01','04:01','07/26/2018','12/07/1900','undifined.png',0,'2018-07-21 12:57:48'),
 	(8,'Gonçalo','07/31/1995','07:00','07:00','','','1532175433.png',0,'2018-07-21 13:16:30'),
 	(9,'Gonçalo1111','05/23/2019','07:57','00:02','07/19/2020','09/04/2000','1532176559.png',0,'2018-07-21 13:35:59'),
-	(10,'Gonçalo','07/18/2018','00:59','23:00','','','undifined.png',0,'2018-07-21 13:42:01');
+	(10,'Gonçalo','07/18/2018','00:59','23:00','','','undifined.png',0,'2018-07-21 13:42:01'),
+	(11,'Gonçalo','07/31/1995','23:59','01:01','11/07/1900','07/02/2018','1532185314.png',1,'2018-07-21 16:01:54');
 
 /*!40000 ALTER TABLE `resources` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -197,15 +207,29 @@ CREATE TABLE `schedule` (
 DROP TABLE IF EXISTS `services`;
 
 CREATE TABLE `services` (
-  `id_services` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `id_service` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
-  `time` int(11) DEFAULT NULL,
+  `time` time DEFAULT NULL,
   `color` varchar(100) DEFAULT NULL,
-  `barbericon` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) DEFAULT '1',
   `date_add` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_services`)
+  PRIMARY KEY (`id_service`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `services` WRITE;
+/*!40000 ALTER TABLE `services` DISABLE KEYS */;
+
+INSERT INTO `services` (`id_service`, `name`, `time`, `color`, `active`, `date_add`)
+VALUES
+	(1,'Gonçalo','23:00:00','FFFFFF',0,'2018-07-21 15:02:19'),
+	(2,'Gonçalo111','06:58:00','blue',0,'2018-07-21 15:03:05'),
+	(3,'Gonçalo','01:58:00','7B3DFF',0,'2018-07-21 15:03:31'),
+	(4,'Barba','00:05:00','4DFF44',0,'2018-07-21 15:42:34'),
+	(5,'Corte','00:25:00','9EFF84',0,'2018-07-21 16:00:56'),
+	(6,'Barba','00:05:00','FF8468',1,'2018-07-21 16:02:35');
+
+/*!40000 ALTER TABLE `services` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump da tabela stock
