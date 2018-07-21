@@ -15,7 +15,7 @@ if(!isset($_SESSION['USERNAME']))
     <meta charset="utf-8">
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dists/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="graphics/styling/sidebar.css?1262">
     <link rel="stylesheet" type="text/css" href="graphics/styling/framework.css?87234">
     <link rel="stylesheet" type="text/css" href="graphics/styling/agenda.css?651">
@@ -52,7 +52,7 @@ if(!isset($_SESSION['USERNAME']))
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-            <li><a href="#" data-placement="bottom" onclick="click_load('stats')" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
+            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i class="fa fa-bar-chart-o"></i>
                 </a>
             </li>
             <li class="dropdown">
@@ -61,7 +61,7 @@ if(!isset($_SESSION['USERNAME']))
                     <!--<li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li> -->
                     <!--<li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li> -->
                     <li class="divider"></li>
-                    <li class="link-url" hashlink="logout"><a href="#"><i class="fa fa-fw fa-power-off"></i>Logout</a></li>
+                    <li class="link-url dropdown-li" hashlink="logout"><i class="fa fa-fw fa-power-off"></i>Logout</li>
                 </ul>
             </li>
         </ul>
@@ -72,22 +72,22 @@ if(!isset($_SESSION['USERNAME']))
                <li>
                    <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/contacts.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
-                       <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/plus.png" alt=""> Adicionar cliente</label></li>
-                       <li><label class="link-url" hashlink="view-client"><img class="sidebar-li-icon" src="graphics/icons/maps-and-flags.png" alt=""> Ver Clientes</label></li>
+                       <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Adicionar cliente</label></li>
+                       <li><label class="link-url" hashlink="view-client"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Clientes</label></li>
                    </ul>
                </li>
                <li>
                    <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-2" class="collapse">
-                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/plus.png" alt=""> Novo Recurso</label></li>
-                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/worker.png" alt=""> Ver Recursos</label></li>
+                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Recurso</label></li>
+                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Recursos</label></li>
                    </ul>
                </li>
                <li>
-                   <label data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/check.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <label data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/push-pin.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
-                       <li><label class="link-url" hashlink=""><img class="sidebar-li-icon" src="graphics/icons/wall-calendar.png" alt=""> Nova Marcação</label></li>
-                       <li><label class="link-url" hashlink="appointments-table"><img class="sidebar-li-icon" src="graphics/icons/stats-1.png" alt=""> Ver Marcações</label></li>
+                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Nova Marcação</label></li>
+                       <li><label class="link-url" hashlink="appointments-table"><img class="sidebar-li-icon" src="graphics/icons/wall-calendar.png" alt=""> Ver Marcações</label></li>
                    </ul>
                </li>
                <li>
@@ -107,7 +107,7 @@ if(!isset($_SESSION['USERNAME']))
             <div class="row" id="main" >
 
                 <div class="col-sm-12 col-md-12 well" >
-                  <h3 class="head-title">Registar Cliente</h3>
+                  <h3 id="head-title">Registar Cliente</h3>
                   <hr class="title-break">
                   <div class="" id="content">
 

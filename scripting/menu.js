@@ -50,17 +50,20 @@ function changedURL()
 
       case 'dashboard':
       $('#content').load('views/dashboard.html');
+      $('#head-title').html('Dashboard');
       $('#main').fadeIn();
       break;
 
       case 'addclient':
       $('#content').load('views/cliente.html');
+      $('#head-title').html('Registar Cliente');
       $('#main').fadeIn();
       break;
 
   	  case 'view-client':
   	  $('#content').load('views/view_client.html');
-  	  $('#main').fadeIn();
+      $('#head-title').html('Clientes');
+      $('#main').fadeIn();
   	  break;
 
       case 'addappointment':
@@ -69,17 +72,20 @@ function changedURL()
 
       case 'appointments-table':
       $('#content').load('views/view_appointments.html');
+      $('#head-title').html('Marcações');
       $('#main').fadeIn();
       break;
 
 	  case 'appointments':
         $('#content').load('views/agenda.html');
+        $('#head-title').html('Agenda Semanal');
         $('#main').fadeIn();
       break;
 
 	  case 'edit-client':
 	    $('#content').load('views/edit-client.html');
-	    $('#main').fadeIn();
+      $('#head-title').html('Editar Dados');
+      $('#main').fadeIn();
 	  break;
 
     case 'logout':
@@ -89,6 +95,7 @@ function changedURL()
 
     default:
     $('#content').load('views/dashboard.html');
+    window.location.hash = 'view=dashboard';
     $('#main').fadeIn();
     break;
 
