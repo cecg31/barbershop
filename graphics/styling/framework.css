@@ -3,10 +3,21 @@
 	color: #224266;
 }
 
-table tr:hover
+table tbody tr:hover
 {
 	cursor: pointer;
-	background-color: #c9e0ef !important ; 
+	background-color: #c9e0ef !important ;
+}
+
+table thead th
+{
+	text-align: center;
+}
+
+table tbody td
+{
+	padding: 15px 0 !important;
+	text-align: center;
 }
 
 .selected

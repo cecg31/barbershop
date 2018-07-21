@@ -3,7 +3,7 @@ function requestLogin()
   $.ajax({
 
     type: "POST",
-     url: "controllers/login_adm_mode.php",
+     url: "controllers/login_Perform.php",
      data: $('#login-info-form').serialize(),
      success: function(data)
      {

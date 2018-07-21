@@ -9,7 +9,7 @@ $executar_query = mysqli_query($database, $clients_data);
 
 $data_client = array();
 
-            while($row=mysqli_fetch_array($executar_query)) 
+            while($row=mysqli_fetch_array($executar_query))
 			{
 
               $client = array();
@@ -28,5 +28,5 @@ $data_client = array();
             }
 
             echo json_encode($data_client);
-			
+
 ?>

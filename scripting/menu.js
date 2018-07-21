@@ -55,7 +55,7 @@ function changedURL()
       break;
 
       case 'addclient':
-      $('#content').load('views/cliente.html');
+      $('#content').load('views/add_client.html');
       $('#head-title').html('Registar Cliente');
       $('#main').fadeIn();
       break;
@@ -83,7 +83,7 @@ function changedURL()
       break;
 
 	  case 'edit-client':
-	    $('#content').load('views/edit-client.html');
+	    $('#content').load('views/edit_client.html');
       $('#head-title').html('Editar Dados');
       $('#main').fadeIn();
 	  break;

@@ -25,10 +25,10 @@ if (isset($_FILES)) {
 	$contacto = $_POST['phone'];
 	$nif = $_POST['nif'];
 	$notificacao = $_POST['notificacao'];
-	
+
 	$imagem = $_FILES['image']['name'];
 	$imagemNome  = time() . ".png";
-	
+
 	$id_client = $_POST['id_client'];
 
 	// echo $nome;
@@ -40,9 +40,9 @@ if (isset($_FILES)) {
 	// echo "here:" . $notificacao;
 	// echo $imagem;
 	// echo $imagemNome;
-	
+
 	require_once 'basedados.php';
-	
+
 	if ($imagem !== "") {
 		$query ="UPDATE `clients` SET name =  '$nome', birth_date = '$aniversario', address = '$morada', email = '$email', phone = '$contacto', photo = '$imagemNome', nif = '$nif', notification = '$notificacao' WHERE id_client = '$id_client'";
 	}

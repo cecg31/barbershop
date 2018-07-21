@@ -6,7 +6,7 @@ $( document ).ready(function() {
 		$.ajax({
 
 			 type: "GET",
-			 url: "controllers/get_client.php",
+			 url: "controllers/read_Clients.php",
 		   	 dataType: 'json',
 			 success: function(data)
 			 {
@@ -14,7 +14,7 @@ $( document ).ready(function() {
 			     for (var i = 0; i < data.length; i++)
 			     {
 
-					 var table_tr = "<tr clientcode='"+ data[i].client_id +"' class='dataClient'>"+  
+					 var table_tr = "<tr clientcode='"+ data[i].client_id +"' class='dataClient'>"+
 					 					"<td><img src='uploads/"+data[i].client_photo+"' alt='photo'  width='24px'></td>" +
 		    		 					"<td>"+ data[i].client_name +"</td> "+
 										"<td>"+ data[i].client_date +"</td> "+
@@ -25,14 +25,14 @@ $( document ).ready(function() {
 										"<td>"+ data[i].client_notification +"</td> "+
 										"<td><img src='graphics/icons/edit.png' width='24px' alt='edit'></td> "+
 					 				"</tr>";
-	      		
+
 					$('#data').append(table_tr);
 			     }
 
 			 }
 
 		   });
-	   
+
 	}
 
 	getClients();

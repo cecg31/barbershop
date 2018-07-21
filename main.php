@@ -69,31 +69,38 @@ if(!isset($_SESSION['USERNAME']))
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
-               <li>
+               <li>   <!-- CLIENTS -->
                    <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/contacts.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
                        <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Adicionar cliente</label></li>
                        <li><label class="link-url" hashlink="view-client"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Clientes</label></li>
                    </ul>
                </li>
-               <li>
+               <li> <!-- RESOURCES -->
                    <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-2" class="collapse">
                        <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Recurso</label></li>
                        <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Recursos</label></li>
                    </ul>
                </li>
-               <li>
-                   <label data-toggle="collapse" data-target="#submenu-3"><img class="sidebar-icon" src="graphics/icons/push-pin.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+               <li> <!-- SERVICES -->
+                   <label  data-toggle="collapse" data-target="#submenu-3"> <img class="sidebar-icon" src="graphics/icons/scissors.png" alt=""> Serviços <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
+                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Serviço</label></li>
+                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Serviços</label></li>
+                   </ul>
+               </li>
+               <li> <!-- APPOINTMENTS -->
+                   <label data-toggle="collapse" data-target="#submenu-4"><img class="sidebar-icon" src="graphics/icons/push-pin.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <ul id="submenu-4" class="collapse">
                        <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Nova Marcação</label></li>
                        <li><label class="link-url" hashlink="appointments-table"><img class="sidebar-li-icon" src="graphics/icons/wall-calendar.png" alt=""> Ver Marcações</label></li>
                    </ul>
                </li>
-               <li>
+               <li> <!-- CALENDAR WIDGET -->
                    <label class="link-url" hashlink="appointments"><img class="sidebar-icon" src="graphics/icons/calendar.png" alt=""> Agenda Semanal</label>
                </li>
-               <li>
+               <li> <!-- PARAMETERS -->
                    <label class="link-url"><img class="sidebar-icon" src="graphics/icons/settings.png" alt=""> Parâmetros</label>
                </li>
            </ul>

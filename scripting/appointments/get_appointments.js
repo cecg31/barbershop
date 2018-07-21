@@ -6,7 +6,7 @@ $( document ).ready(function() {
 		$.ajax({
 
 			type: "GET",
-			 url: "controllers/get_appointments.php",
+			 url: "controllers/read_Appointments.php",
 		   	dataType: 'json',
 			 success: function(data)
 			 {
