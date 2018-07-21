@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_FILES)) {
         $error = false;
         $files = array();
@@ -17,20 +18,23 @@ if (isset($_FILES)) {
     } else {
         $data = array('success' => 'NO FILES ARE SENT','formData' => $_REQUEST);
     }
-
+	
 	$nome = $_POST['name'];
 	$aniversario = $_POST['birth'];
-	$morada = $_POST['address'];
-	$email = $_POST['email'];
-	$contacto = $_POST['phone'];
-	$nif = $_POST['nif'];
-	$notificacao = $_POST['notificacao'];
+	$tempo_inicio = $_POST['time_begin'];
+	$tempo_fim = $_POST['time_end'];
+	$ferias_inicio = $_POST['holidays_begin'];
+	$ferias_fim = $_POST['holidays_end'];
 
 	$imagem = $_FILES['image']['name'];
-	$imagemNome  = time() . ".png";
-
-	$id_client = $_POST['id_client'];
-
+	
+	if ($imagem == ""){
+		$imagemNome = "undifined.png";
+	}
+	else {
+		$imagemNome  = time() . ".png";
+	}
+	
 	// echo $nome;
 	// echo $aniversario;
 	// echo $morada;
@@ -40,15 +44,12 @@ if (isset($_FILES)) {
 	// echo "here:" . $notificacao;
 	// echo $imagem;
 	// echo $imagemNome;
-
+	
 	require_once '../basedados.php';
-
-	if ($imagem !== "") {
-		$query ="UPDATE `clients` SET name =  '$nome', birth_date = '$aniversario', address = '$morada', email = '$email', phone = '$contacto', photo = '$imagemNome', nif = '$nif', notification = '$notificacao' WHERE id_client = '$id_client'";
-	}
-	else {
-		$query ="UPDATE `clients` SET name =  '$nome', birth_date = '$aniversario', address = '$morada', email = '$email', phone = '$contacto', nif = '$nif', notification = '$notificacao' WHERE id_client = '$id_client'";
-	}
-
+	
+	$query ="INSERT INTO `resources` (`name`, `birth_date`, `start_hour`, `end_hour`, `holidays_begin`, `holidays_end`, `photo_resources`)
+VALUES
+	('$nome', '$aniversario', '$tempo_inicio', '$tempo_fim', '$ferias_inicio', '$ferias_fim', '$imagemNome');";
 	$executar_query = mysqli_query($database, $query);
+
 ?>

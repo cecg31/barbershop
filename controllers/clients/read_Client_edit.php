@@ -1,7 +1,7 @@
 <?php
 $id_client = $_GET['id_client'];
 
-	require_once 'basedados.php';
+	require_once '../basedados.php';
 	
 	$query ="SELECT clients.*, notification.* FROM clients LEFT JOIN notification ON clients.notification = notification.id_notification  WHERE id_client = $id_client ORDER BY id_client ASC";
 	

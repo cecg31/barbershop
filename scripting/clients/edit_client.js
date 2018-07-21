@@ -9,7 +9,7 @@ $( document ).ready(function() {
 		$.ajax({
 
 			 type: "GET",
-			 url: "controllers/read_Client.php",
+			 url: "controllers/clients/read_Client_edit.php",
 			 data: {id_client:id_client},
 		   	 dataType: 'json',
 			 success: function(data)
@@ -60,7 +60,7 @@ $( document ).ready(function() {
 			 formData.append("id_client", id_client);
 
 	         $.ajax({
-	             url: "controllers/update_Client.php",
+	             url: "controllers/clients/update_Client.php",
 	             type: 'POST',
 	             data: formData,
 	             success: function (data) {
@@ -82,7 +82,7 @@ $( document ).ready(function() {
 	 		$.ajax({
 
 	 			 type: "POST",
-	 			 url: "controllers/delete_Client.php",
+	 			 url: "controllers/clients/delete_Client.php",
 	 			 data: {id_client:id_client},
 	 		   	 dataType: 'json',
 	 			 success: function(data)
@@ -91,7 +91,7 @@ $( document ).ready(function() {
 
 		                 setTimeout(function(){
 
-		                   window.location.href="main.php#view=view-client";
+		                   window.location.href="main.php#view=view-clients";
 
 		                 }, 1500);
 	 			 }
@@ -99,6 +99,6 @@ $( document ).ready(function() {
 	 	});
 
 		$('.cancel-btn').on('click', function () {
-			window.location.hash = 'view=view-client';
+			window.location.hash = 'view=view-clients';
 		});
  })

@@ -27,11 +27,11 @@ $(document).ready(function() {
 	    var formData = new FormData(this);
 
 	    $.ajax({
-	        url: "controllers/create_resources.php", 
+	        url: "controllers/resources/create_resources.php", 
 	        type: 'POST',
 	        data: formData,
 	        success: function (data) {
-				console.log(data);
+
 				swal( 'Recurso inserido com sucesso!', 'Aguarde', 'success');
 	              
 	                setTimeout(function(){

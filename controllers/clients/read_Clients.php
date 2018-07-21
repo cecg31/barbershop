@@ -1,7 +1,6 @@
 <?php
 
-
-require_once 'basedados.php';
+require_once '../basedados.php';
 
 $clients_data ="SELECT clients.*, notification.* FROM clients LEFT JOIN notification ON clients.notification = notification.id_notification WHERE active = '1' ORDER BY id_client ASC";
 

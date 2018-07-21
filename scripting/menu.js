@@ -83,6 +83,12 @@ function changedURL()
 	  $('#head-title').html('Clientes');
 	  $('#main').fadeIn();
 	  break;
+	  
+	  case 'edit_resources':
+	  $('#content').load('views/resources/edit_resources.html');
+	  $('#head-title').html('Clientes');
+	  $('#main').fadeIn();
+	  break;
 
       case 'addappointment':
 

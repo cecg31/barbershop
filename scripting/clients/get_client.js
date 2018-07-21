@@ -6,7 +6,7 @@ $( document ).ready(function() {
 		$.ajax({
 
 			 type: "GET",
-			 url: "controllers/read_Clients.php",
+			 url: "controllers/clients/read_Clients.php",
 		   	 dataType: 'json',
 			 success: function(data)
 			 {

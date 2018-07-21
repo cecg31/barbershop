@@ -4,7 +4,7 @@ if (isset($_FILES)) {
         $error = false;
         $files = array();
 
-        $uploaddir = "../uploads/";
+        $uploaddir = "../../uploads/";
         foreach ($_FILES as $file) {
 			$imagem = $_FILES['image']['name'];
 			$imagemNome  = time() . ".png";
@@ -46,7 +46,7 @@ if (isset($_FILES)) {
 	// echo $imagem;
 	// echo $imagemNome;
 	
-	require_once 'basedados.php';
+	require_once '../basedados.php';
 	
 	$query ="INSERT INTO `clients` ( `name`, `birth_date`, `address`, `email`, `phone`, `photo`, `nif`, `notification`)
 VALUES

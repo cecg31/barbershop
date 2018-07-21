@@ -11,7 +11,7 @@
 	        var formData = new FormData(this);
 
 	        $.ajax({
-	            url: "controllers/create_Client.php", 
+	            url: "controllers/clients/create_Client.php", 
 	            type: 'POST',
 	            data: formData,
 	            success: function (data) {
@@ -19,7 +19,7 @@
 
 		                setTimeout(function(){
 
-		                  window.location.href="main.php#view=view-client";
+		                  window.location.href="main.php#view=view-clients";
 
 		                }, 1500);
 	            },
@@ -47,6 +47,6 @@
        });
 
 		$('.cancel-btn').on('click', function () {
-			window.location.hash = 'view=view-client';
+			window.location.hash = 'view=view-clients';
 		});
 	});

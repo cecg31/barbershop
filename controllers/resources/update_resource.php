@@ -1,10 +1,9 @@
 <?php
-
 if (isset($_FILES)) {
         $error = false;
         $files = array();
 
-        $uploaddir = "../uploads/";
+        $uploaddir = "../../uploads/";
         foreach ($_FILES as $file) {
 			$imagem = $_FILES['image']['name'];
 			$imagemNome  = time() . ".png";
@@ -18,11 +17,11 @@ if (isset($_FILES)) {
     } else {
         $data = array('success' => 'NO FILES ARE SENT','formData' => $_REQUEST);
     }
-	
+
 	$nome = $_POST['name'];
 	$aniversario = $_POST['birth'];
 	$tempo_inicio = $_POST['time_begin'];
-	$tempo_fim = $_POST['time_begin'];
+	$tempo_fim = $_POST['time_end'];
 	$ferias_inicio = $_POST['holidays_begin'];
 	$ferias_fim = $_POST['holidays_end'];
 	
@@ -34,7 +33,8 @@ if (isset($_FILES)) {
 	else {
 		$imagemNome  = time() . ".png";
 	}
-	
+	$id_resource = $_POST['id_resource'];
+
 	// echo $nome;
 	// echo $aniversario;
 	// echo $morada;
@@ -44,12 +44,15 @@ if (isset($_FILES)) {
 	// echo "here:" . $notificacao;
 	// echo $imagem;
 	// echo $imagemNome;
-	
-	require_once 'basedados.php';
-	
-	$query ="INSERT INTO `resources` (`name`, `birth_date`, `start_hour`, `end_hour`, `holidays_begin`, `holidays_end`, `photo_resources`)
-VALUES
-	('$nome', '$aniversario', '$tempo_inicio', '$tempo_fim', '$ferias_inicio', '$ferias_fim', '$imagemNome');";
-	$executar_query = mysqli_query($database, $query);
 
+	require_once '../basedados.php';
+
+	if ($imagem !== "") {
+		$query ="UPDATE `resources` SET name =  '$nome', birth_date = '$aniversario', start_hour = '$tempo_inicio', end_hour = '$tempo_fim', holidays_begin = '$ferias_inicio', holidays_end = '$ferias_fim', photo_resources = '$imagemNome' WHERE id_resource = '$id_resource'";
+	}
+	else {
+		$query ="UPDATE `resources` SET name =  '$nome', birth_date = '$aniversario', start_hour = '$tempo_inicio', end_hour = '$tempo_fim', holidays_begin = '$ferias_inicio', holidays_end = '$ferias_fim' WHERE id_resource = '$id_resource'";
+	}
+
+	$executar_query = mysqli_query($database, $query);
 ?>
