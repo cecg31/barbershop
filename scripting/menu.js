@@ -55,16 +55,34 @@ function changedURL()
       break;
 
       case 'addclient':
-      $('#content').load('views/add_client.html');
+      $('#content').load('views/clients/add_client.html');
       $('#head-title').html('Registar Cliente');
       $('#main').fadeIn();
       break;
 
   	  case 'view-clients':
-  	  $('#content').load('views/view_clients.html');
+  	  $('#content').load('views/clients/view_clients.html');
       $('#head-title').html('Clientes');
       $('#main').fadeIn();
   	  break;
+	  
+	  case 'edit-client':
+	  $('#content').load('views/clients/edit_client.html');
+	  $('#head-title').html('Editar Dados');
+	  $('#main').fadeIn();
+	  break;
+	  
+	  case 'add_resources':
+	  $('#content').load('views/resources/add_resources.html');
+	  $('#head-title').html('Clientes');
+	  $('#main').fadeIn();
+	  break;
+	  
+	  case 'view_resources':
+	  $('#content').load('views/resources/view_resources.html');
+	  $('#head-title').html('Clientes');
+	  $('#main').fadeIn();
+	  break;
 
       case 'addappointment':
 
@@ -81,12 +99,6 @@ function changedURL()
         $('#head-title').html('Agenda Semanal');
         $('#main').fadeIn();
       break;
-
-	  case 'edit-client':
-	    $('#content').load('views/edit_client.html');
-      $('#head-title').html('Editar Dados');
-      $('#main').fadeIn();
-	  break;
 
     case 'logout':
 	    $('#content').load('logout.php');

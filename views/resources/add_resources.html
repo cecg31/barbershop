@@ -1,0 +1,78 @@
+<link rel="stylesheet" href="graphics/styling/input.css">
+<form class="form-horizontal" id="resources-form" method="post" action="controllers/add_resources.php"  role="form" enctype="multipart/form-data">
+<div class="large-box">
+
+<div class="large-box content-centered">
+	<img id="image_upload_preview" src="http://placehold.it/100x100" alt="your image" /> <br> <br>
+	<button type="button" onclick="document.getElementById('photo').click();" class="button accept-btn">Carregar</button>
+	<input type="file" style="display:none!important;" name="image" class="form-control-file" id="photo" >
+</div>
+
+<div class="medium-box">
+
+	<div class="form-input-division">
+		<label for="firstName" class="form-input-label">Nome</label>
+		<input type="text" name="name" id="name" placeholder="Nome" class="form-input" required>
+	</div>
+	
+	<div class="form-input-division">
+		<label for="ID Number" class="form-input-label">Hora de Início</label>
+		<input type="time" class="form-input" id="time_begin" name="time_begin" placeholder="Hora de Início" required>
+	</div>
+	<div class="form-input-division">
+		<label for="ID Number" class="form-input-label" id="holidays_label">Adicionar Férias</label>
+		<input type="checkbox" class="form-input" id="holidays" name="holidays">
+	</div>
+</div>
+
+<div class="medium-box">
+	<div class="form-input-division">
+		<label for="lastName" class="form-input-label">Data de Nascimento</label>
+		<div class="input-group date" data-provide="datepicker">
+		<input type="text" name="birth" class="form-input" id="data-date" required>
+		<div class="input-group-addon">
+		<span class="glyphicon glyphicon-th"></span>
+		</div>
+		</div>
+	</div>
+	
+	<div class="form-input-division">
+		<label for="ID Number" class="form-input-label">Hora de Fim</label>
+		<input type="time" class="form-input" id="time_end" name="time_end" placeholder="Hora de Fim" required>
+	</div>
+ </div>
+ 
+ <div class="medium-box date_holiday holidays_date">
+	<div class="form-input-division">
+		<label for="lastName" class="form-input-label">Início</label>
+		<div class="input-group date" data-provide="datepicker">
+			<input type="text" name="holidays_begin" class="form-input" id="holidays_begin">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-th"></span>
+			</div>
+		</div>
+	</div>
+ </div> 
+ 
+ <div class="medium-box date_holiday holidays_date">
+	<div class="form-input-division">
+		<label for="lastName" class="form-input-label">Fim</label>
+		<div class="input-group date" data-provide="datepicker">
+			<input type="text" name="holidays_end" class="form-input" id="holidays_end">
+			<div class="input-group-addon">
+				<span class="glyphicon glyphicon-th"></span>
+			</div>
+		</div>
+	</div>
+ </div>
+ 
+ <div class="large-box content-centered">
+	 <button type="submit" onclick="fieldVerification()" class="button check-btn">Inserir</button>
+	 <button type="button" class="button cancel-btn">Cancelar</button>
+ </div>
+  </div>
+</form>
+
+<script src="scripting/resources/resources.js">
+
+</script>

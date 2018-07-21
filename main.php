@@ -79,8 +79,8 @@ if(!isset($_SESSION['USERNAME']))
                <li> <!-- RESOURCES -->
                    <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-2" class="collapse">
-                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Recurso</label></li>
-                       <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Recursos</label></li>
+                       <li><label class="link-url" hashlink="add_resources"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Recurso</label></li>
+                       <li><label class="link-url" hashlink="view_resources"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Recursos</label></li>
                    </ul>
                </li>
                <li> <!-- SERVICES -->

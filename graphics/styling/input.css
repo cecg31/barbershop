@@ -157,3 +157,18 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     padding: 10px 1%;
   }
 }
+
+/*Resources*/
+
+#holidays {
+	width: 7%;
+    display: inline-block;
+}
+
+#holidays_label {
+	display: inline-block !important;
+}
+
+.holidays_date {
+	display: none;
+}

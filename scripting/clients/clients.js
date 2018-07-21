@@ -15,7 +15,7 @@
 	            type: 'POST',
 	            data: formData,
 	            success: function (data) {
-					swal( 'Cliente inserido com sucesso!.', 'Aguarde', 'success');
+					swal( 'Cliente inserido com sucesso!', 'Aguarde', 'success');
 
 		                setTimeout(function(){
 
