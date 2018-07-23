@@ -227,6 +227,21 @@
     background-color: #151b1e;
 }
 
+#search {
+    width: 20%;
+    border-radius: 20px;
+    border: 2px solid #305658;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    margin-bottom: 1%;
+	outline: none;
+}
+
+#search:focus {
+   width: 25%;
+}
+
 #head-title
 {
   color: #144D42;

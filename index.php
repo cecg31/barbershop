@@ -6,7 +6,9 @@
 		<!-- LINKS -->
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
-			<!-- SCRIPTS -->
+		<!--TAB LOGO -->
+		<link rel="shortcut icon" href="graphics/images/favicon.ico" type="image/x-icon" />	
+		<!-- SCRIPTS -->
 		<script src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="scripting/login.js" type="text/javascript" charset="utf-8"></script>
