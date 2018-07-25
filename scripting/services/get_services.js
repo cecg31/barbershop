@@ -16,6 +16,7 @@ $( document ).ready(function() {
 					 
 					 var table_tr = "<tr servicecode='"+ data[i].service_id +"' style='background-color:#"+data[i].service_color+";'>"+
 		    		 					"<td>"+ data[i].service_name +"</td> "+
+						 				"<td>"+ data[i].service_price +"</td> "+
 										"<td>"+ data[i].service_time +"</td> "+
 										"<td><img src='graphics/icons/edit.png' width='24px' alt='edit'></td> "+
 					 				"</tr>";

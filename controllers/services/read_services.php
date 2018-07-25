@@ -16,6 +16,7 @@ $data_services = array();
               $service['service_name'] = $row['name'];
               $service['service_time'] = $row['time'];
 			  $service['service_color'] = $row['color'];
+			  $service['service_price'] = $row['price'];
 			  
               array_push($data_services, $service);
 

@@ -17,6 +17,7 @@ $( document ).ready(function() {
 				 $('#name').val(data.service_name);
 				 $('#color').val(data.service_color);
 				 $('#time').val(data.service_time);
+				 $('#price').val(data.service_price);
 				 
 				 $("#color").css("background-color","#" + data.service_color);
 	

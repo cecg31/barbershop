@@ -13,6 +13,7 @@ $id_service = $_GET['id_service'];
 		          $service['service_name'] = $row['name'];
 		          $service['service_time'] = $row['time'];
 	  			  $service['service_color'] = $row['color'];
+				  $service['service_price'] = $row['price'];
 			  
 	            }
 
