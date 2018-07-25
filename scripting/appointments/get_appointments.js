@@ -1,12 +1,12 @@
 $( document ).ready(function() {
 
-	function getClients()
+	function getAppointments()
 	{
 
 		$.ajax({
 
 			type: "GET",
-			 url: "controllers/read_Appointments.php",
+			 url: "controllers/appointments/read_Appointments.php",
 		   	dataType: 'json',
 			 success: function(data)
 			 {
@@ -34,10 +34,10 @@ $( document ).ready(function() {
 
 	}
 
-	getClients();
+	getAppointments();
 
 	$('tbody').on('click', 'tr', function () {
-		var id_client = $(this).attr('clientcode');
+		var id_client = $(this).attr('appointmentcode');
 		window.location.hash = 'view=edit-client&id_client='+id_client;
 	})
 });

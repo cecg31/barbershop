@@ -115,7 +115,7 @@ function changedURL()
       break;
 
       case 'appointments-table':
-      $('#content').load('views/view_appointments.html');
+      $('#content').load('views/appointments/view_appointments.html');
       $('#head-title').html('Marcações');
       $('#main').fadeIn();
       break;

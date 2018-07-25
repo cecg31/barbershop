@@ -1,7 +1,7 @@
 <?php
 
 
-require_once 'basedados.php';
+require_once '../basedados.php';
 
 $schedule_query ="SELECT schedule.*, clients.name, clients.photo, users.name as user_name, services.name as service_name, services.time
 FROM schedule
@@ -10,7 +10,7 @@ ON schedule.id_client = clients.id_client
 LEFT JOIN users
 ON schedule.id_user = users.id_user
 LEFT JOIN services
-ON schedule.id_service = services.id_services;";
+ON schedule.id_service = services.id_service;";
 
   $executar_query = mysqli_query($database, $schedule_query);
 
