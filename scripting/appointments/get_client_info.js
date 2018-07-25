@@ -72,4 +72,32 @@ $( document ).ready(function() {
 
 		 });
 
+
+		 function getServices()
+	 	{
+
+	 		$.ajax({
+
+	 			 type: "GET",
+	 			 url: "controllers/services/read_services.php",
+	 		   	 dataType: 'json',
+	 			 success: function(data)
+	 			 {
+	 				 $('#data').html('');
+	 			     for (var i = 0; i < data.length; i++)
+	 			     {
+
+						var option = "<option sid='" + data[i].service_id + "' value='" + data[i].service_time + "'>" + data[i].service_name + "</option>";
+
+	 					$('#service-list-choice').append(option);
+	 			     }
+
+	 			 }
+
+	 		   });
+
+	 	}
+
+		getServices();
+
 });
