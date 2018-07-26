@@ -9,7 +9,7 @@
 # Database: barbershop
 # Generation Time: 2018-07-25 19:25:50 +0000
 # ************************************************************
-
+use barbershop;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;

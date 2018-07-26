@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="graphics/styling/input.css">
+
 <form class="form-horizontal" id="services-form" method="post" action="controllers/add_resources.php"  role="form" enctype="multipart/form-data">
 <div class="large-box">
 
@@ -26,6 +27,7 @@
 
 						<div class="form-input-division">
 							<label for="firstName" class="form-input-label">Nome</label>
+							<label for="firstName" style="display:none" id="cid-code"></label>
 							<label id="name" class="input-readonly">Carlos Emanuel Carvalho Gonçalves</label>
 						</div>
 
@@ -77,35 +79,62 @@
 							</tbody>
 						</table>
 
-						<script src="scripting/appointments/get_client_info.js"></script>
+
 					</div>
 
 			</div>
 
 				<div class="tab" tab-index="2">
-						<div class="large-box">
+
+
+							<div class="large-box">
+
+								<div class="small-medium-box">
+
+									<div class="medium-large-box full-width">
+											<label for="">Serviço Pretendido</label>
+										<select id="service-list-choice" class="form-input" name="">
+											<option value="" disabled selected> Escolha uma opção</option>
+										</select>
+									</div>
+										<br>
+									<div class="medium-large-box full-width">
+											<label for="">Recurso Necessário</label>
+										<select id="resource-list-choice" class="form-input" name="">
+											<option value="" disabled selected> Escolha uma opção</option>
+										</select>
+									</div>
+
+								</div>
+							<div class="small-medium-box">
+										<div class="medium-large-box">
+												<label for="">Data da Marcação</label>
+												<input type="text" id="date_chosen"class="datepicker form-input"/>
+										</div>
+										<br>
+										<div class="medium-box">
+												<label for="">Hora</label>
+												<div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+													 <input type="text" class="form-control" id="time_begin"  value="09:30">
+													 <span class="input-group-addon">
+															 <span class="glyphicon glyphicon-time"></span>
+													 </span>
+												</div>
+										</div>
+
+								</div>
+
 								<div class="small-box">
-									<select id="service-list-choice" class="form-input" name="">
-										<option value="" disabled selected> <img src="graphics/icons/agenda2.png" alt=""> Selecione um serviço</option>
-									</select>
-									<hr>
-									<table class="table-layout">
-									 <thead>
-										 <tr>
-											 <th>Dia</th>
-											 <th>De</th>
-											 <th>Até</th>
-									 </tr>
-									 </thead>
-									 <tbody>
-
-									 </tbody>
-									</table>
+										<br>
+										<input type="button" id="check_availability" class="button danger-btn" name="" value="Confirmar Vaga">
+										<br>	<br>
+										<input type="button" style="visibility:hidden;" id="insert_appointment" class="button check-btn" name="" value="Fazer Marcação">
 								</div>
-								<div class="medium-box">
 
-								</div>
+
 						</div>
+
+
 				 </div>
 
 		</div>
@@ -117,15 +146,9 @@
 
 
 <script src="dists/jscolor.js"></script>
+<script src="scripting/appointments/get_client_info.js"></script>
 <script type="text/javascript">
 
-			$('.tab-options ul').on('click', 'li', function()
-			{
-					var tab_to_toggle = $(this).attr('tab-toggle');
-					$('.tab-options ul li').removeClass('tab-li-active');
-					$(this).addClass('tab-li-active');
-					$('.tab').removeClass('tab-active');
-					$('.tab[tab-index="'+tab_to_toggle+'"]').addClass('tab-active');
-			});
+
 
 </script>

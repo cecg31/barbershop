@@ -7,6 +7,14 @@ body
 {
   width: 100%;
   padding: 10px 0;
+  vertical-align: top;
+}
+
+.medium-large-box
+{
+  width: 63.5%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .medium-box
@@ -14,12 +22,26 @@ body
   width: 47%;
   display: inline-block;
   vertical-align: top;
-  padding: 10px 1%;
+
+}
+
+.small-medium-box
+{
+  width: 35%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .small-box
 {
   width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.full-width
+{
+  display: block;
 }
 
 .box-centered
@@ -146,6 +168,17 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
    background-color: #1e8c43;
 }
 
+.danger-btn
+{
+   background-color: #d6b43e;
+   color: white;
+   border: 1px solid #cead39;
+}
+.danger-btn:hover
+{
+   background-color: #cead39;
+}
+
 .remove-btn {
 	float: right;
 	background-color: #edc721;
@@ -240,4 +273,3 @@ transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 {
   display: inline-block;
 }
-

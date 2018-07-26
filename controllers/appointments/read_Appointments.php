@@ -3,12 +3,12 @@
 
 require_once '../basedados.php';
 
-$schedule_query ="SELECT schedule.*, clients.name, clients.photo, users.name as user_name, services.name as service_name, services.time
+$schedule_query ="SELECT schedule.*, clients.name, clients.photo, resources.name as resource_name, services.name as service_name, services.time
 FROM schedule
 LEFT JOIN clients
 ON schedule.id_client = clients.id_client
-LEFT JOIN users
-ON schedule.id_user = users.id_user
+LEFT JOIN resources
+ON schedule.id_resource = resources.id_resource
 LEFT JOIN services
 ON schedule.id_service = services.id_service;";
 
@@ -24,7 +24,7 @@ ON schedule.id_service = services.id_service;";
               $appointment['schedule_date'] = $row['datetime'];
               $appointment['client_name'] = $row['name'];
               $appointment['client_photo'] = $row['photo'];
-              $appointment['user_responsable'] = $row['user_name'];
+              $appointment['user_responsable'] = $row['resource_name'];
       			  $appointment['service_type'] = $row['service_name'];
       			  $appointment['time_need'] = $row['time'];
 
