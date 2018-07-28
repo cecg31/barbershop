@@ -5,7 +5,7 @@ require_once '../basedados.php';
 
 $schedule_query ="SELECT schedule.*, services.time, ADDTIME(schedule.datetime, services.time) as enddate
 FROM barbershop.schedule
-LEFT JOIN services ON schedule.id_service = services.id_service order by datetime;";
+LEFT JOIN services ON schedule.id_service = services.id_service  order by datetime;";
 
   $executar_query = mysqli_query($database, $schedule_query);
 
@@ -23,8 +23,8 @@ LEFT JOIN services ON schedule.id_service = services.id_service order by datetim
 
                 $spots_available = array();
                 $time_needed = $_GET['timespent'];
-                $opening_hour = strtotime("2018-07-21 07:00:00.0");
-                $closing_hour = strtotime("2018-07-21 23:59:00.0");
+                $opening_hour = strtotime("2018-07-31 07:00:00.0");
+                $closing_hour = strtotime("2018-07-31 23:59:00.0");
                 $appoint_plus_opening = strtotime('+' . $time_needed . ' minutes', $opening_hour);
                 $first_appoint = $schedule_data[0]['schedule_date'];
                 $last_appoint = $schedule_data[sizeof($schedule_data) - 1]['schedule_date'];
@@ -44,7 +44,7 @@ LEFT JOIN services ON schedule.id_service = services.id_service order by datetim
 
             for ($i=0; $i < sizeof($schedule_data); $i++)
             {
-              $j = $i + 1;
+               $j = $i + 1;
                $appoint_end = $schedule_data[$i]['end_date'];
 
                if ($i + 1 < sizeof($schedule_data))
@@ -57,8 +57,8 @@ LEFT JOIN services ON schedule.id_service = services.id_service order by datetim
                {
                  //echo "vaga às " . $appoint_end . "<br>";
                  $spot = array();
-                 $spot['spot_start'] = date('H:i', strtotime($appoint_end));
-                 $spot['spot_end'] = date('H:i', strtotime($appoint_next));
+                 $spot['spot_start'] = date('Y-m-d H:i', strtotime($appoint_end));
+                 $spot['spot_end'] = date('Y-m-d H:i', strtotime($appoint_next));
                  array_push($spots_available, $spot);
                }
 

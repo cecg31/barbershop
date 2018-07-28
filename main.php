@@ -11,8 +11,9 @@ if(!isset($_SESSION['USERNAME']))
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Business Manager</title>
+    <title>Gestor de Salão</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="dists/font-awesome/css/font-awesome.min.css">
@@ -20,7 +21,7 @@ if(!isset($_SESSION['USERNAME']))
     <link rel="stylesheet" type="text/css" href="graphics/styling/framework.css?87234">
     <link rel="stylesheet" type="text/css" href="graphics/styling/agenda.css?651">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
-
+    <link rel="shortcut icon" href="graphics/images/favicon.ico" type="image/x-icon" />	
     <link rel="stylesheet" type="text/css" href="graphics/styling/jquery-clockpicker.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" id="bootstrap-css">
@@ -49,8 +50,8 @@ if(!isset($_SESSION['USERNAME']))
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" >
-                <img class="link-url" hashlink="dashboard" style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/logomini.jpg" alt="LOGO">
-                <p>Barbearia Amorim - Gestão</p>
+                <img class="link-url" hashlink="dashboard" style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/devmaV7.png" alt="LOGO">
+                <p>DEVMA Soft. - Barbearia Amorim  </p>
             </a>
         </div>
         <!-- Top Menu Items -->

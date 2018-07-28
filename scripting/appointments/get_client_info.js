@@ -191,7 +191,7 @@ function insertAppointment()
 					  swal( 'Sucesso', 'Marcação registada.', 'success');
 						setTimeout(function(){
 
-							window.location.href="main.php#view=view_appointments";
+							window.location.href="main.php#view=appointments-table";
 
 						}, 1500);
 	 			 }

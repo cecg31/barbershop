@@ -5,18 +5,18 @@ $( document ).ready(function() {
 
 		$.ajax({
 
-			type: "GET",
-			 url: "controllers/appointments/read_Appointments.php",
+				type: "GET",
+			 	url: "controllers/appointments/read_Appointments.php",
 		   	dataType: 'json',
-			 success: function(data)
-			 {
-				 $('#data').html('');
+			  success: function(data)
+			  {
+				 	 $('#data').html('');
 			     for (var i = 0; i < data.length; i++)
 			     {
 
-					 var table_tr = "<tr appointmentcode='"+ data[i].schedule_id +"' class='dataClient'>"+
+					 		var table_tr = "<tr appointmentcode='"+ data[i].schedule_id +"' class='dataClient'>"+
 					 					"<td><img src='uploads/"+data[i].client_photo+"' alt='photo'  width='24px'></td>" +
-		    		 					"<td>"+ data[i].client_name +"</td> "+
+		    		 				"<td>"+ data[i].client_name +"</td> "+
 										"<td>"+ data[i].user_responsable +"</td> "+
 										"<td>"+ data[i].service_type +"</td> "+
 										"<td>"+ data[i].schedule_date +"</td> "+
@@ -25,7 +25,7 @@ $( document ).ready(function() {
 					 					"<td><img src='graphics/icons/x-button.png' width='24px' alt='delete'></td></td> "+
 					 				"</tr>";
 
-					$('#data').append(table_tr);
+						$('#data').append(table_tr);
 			     }
 
 			 }
