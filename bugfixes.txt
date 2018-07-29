@@ -1,0 +1,8 @@
+bugfix needed:
+data nascimento - Clientes
+hora de trabalho, clockpicker - Recursos
+tempo, clockpicker- serviços
+corrigir datepickers para o novo
+
+
+fixed:

@@ -60,7 +60,7 @@ CREATE TABLE `clients` (
   `active` tinyint(1) DEFAULT '1',
   `date_add` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_client`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (1,'Gonçalo Nuno Costa','0000-00-00','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532180564.png',2147483647,'1',1,'2018-07-21 14:42:44'),(2,'Carlos Emanuel C. Gonçalves','0000-00-00','Fafe','carlosecg_1996@hotmail.com',969912337,'undifined.png',9878469,'3',1,'2018-07-23 20:46:54'),(3,'Teste','0000-00-00','Teste','sofiapereira3@hotmail.com',123456,'1532375781.png',12345,'3',0,'2018-07-23 20:56:21'),(4,'André Jesus Costa','0000-00-00','Rua das Moradias, Sol Poente 31','andrecosta_31@gmail.com',968548962,'undifined.png',256987452,'1',1,'2018-07-28 20:22:02'),(5,'Jorge Manuel Castro Pereira','0000-00-00','Av. Lisboa Costa','jorge_cp@mail.pt',916587395,'undifined.png',36589452,'3',1,'2018-07-28 20:23:05');
+INSERT INTO `clients` VALUES (1,'Gonçalo','0000-00-00','Barcelos','goncalonuno_1995@hotmail.com',123123,'1532180564.png',123123,'1',1,'2018-07-21 14:42:44'),(2,'Carlos','0000-00-00','Fafe','goncalonuno_1995@hotmail.com',654,'undifined.png',987,'3',1,'2018-07-23 20:46:54'),(3,'Teste','0000-00-00','Teste','sofiapereira3@hotmail.com',123456,'1532375781.png',12345,'3',0,'2018-07-23 20:56:21');
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -194,7 +194,7 @@ CREATE TABLE `resources` (
   `active` tinyint(1) DEFAULT '1',
   `date_add` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_resource`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,7 +203,7 @@ CREATE TABLE `resources` (
 
 LOCK TABLES `resources` WRITE;
 /*!40000 ALTER TABLE `resources` DISABLE KEYS */;
-INSERT INTO `resources` VALUES (12,'Pedro Carvalho','07/18/1992','07:00:00','20:00:00','','','1532546709.png',1,'2018-07-25 20:25:09'),(13,'Manuel Teixeira','08/28/1991','09:00:00','23:00:00','','','undifined.png',1,'2018-07-28 20:35:22');
+INSERT INTO `resources` VALUES (1,'Gonçalo111','11/20/1900','05:01','10:01','11/21/1900','12/07/1900','1532175714.png',0,'2018-07-21 11:56:46'),(2,'Gonçaloqwe','12/05/1900','05:01','05:01','11/07/1900','11/05/1900','1532170633.png',0,'2018-07-21 11:58:00'),(3,'Gonçalo','0000-00-00','01:01:00','01:01:00','0000-00-00','0000-00-00','1532170633.png',0,'2018-07-21 11:58:01'),(4,'Gonçalo','07/18/2018','01:01','01:01','07/06/2018','07/02/2018','1532170633.png',0,'2018-07-21 11:59:59'),(5,'Gonçalo','07/04/2018','01:01','01:01','','','undifined.png',0,'2018-07-21 12:00:52'),(6,'Gonçalo1111','07/14/2018','02:01','02:01','','','1532172762.png',0,'2018-07-21 12:32:42'),(7,'Gonçalo','07/04/2018','01:01','04:01','07/26/2018','12/07/1900','undifined.png',0,'2018-07-21 12:57:48'),(8,'Gonçalo','07/31/1995','07:00','07:00','','','1532175433.png',0,'2018-07-21 13:16:30'),(9,'Gonçalo1111','05/23/2019','07:57','00:02','07/19/2020','09/04/2000','1532176559.png',0,'2018-07-21 13:35:59'),(10,'Gonçalo','07/18/2018','00:59','23:00','','','undifined.png',0,'2018-07-21 13:42:01'),(11,'Gonçalo','07/31/1995','23:59','01:01','11/07/1900','07/02/2018','1532185314.png',0,'2018-07-21 16:01:54'),(12,'Gonçalo','07/18/2018','01:01','22:01','','','1532546709.png',1,'2018-07-25 20:25:09');
 /*!40000 ALTER TABLE `resources` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -221,7 +221,7 @@ CREATE TABLE `schedule` (
   `id_service` int(11) DEFAULT NULL,
   `datetime` datetime DEFAULT NULL,
   PRIMARY KEY (`id_schedule`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -230,7 +230,7 @@ CREATE TABLE `schedule` (
 
 LOCK TABLES `schedule` WRITE;
 /*!40000 ALTER TABLE `schedule` DISABLE KEYS */;
-INSERT INTO `schedule` VALUES (6,4,12,5,'2018-07-31 09:30:00'),(7,2,12,6,'2018-07-31 10:00:00'),(8,1,12,6,'2018-07-31 10:10:00'),(9,5,12,5,'2018-07-31 10:15:00'),(10,4,12,5,'2018-08-01 09:30:00'),(11,4,13,5,'2018-07-31 09:00:00'),(12,2,13,5,'2018-07-31 10:00:00'),(13,1,13,5,'2018-07-31 10:30:00'),(14,5,13,5,'2018-07-31 11:00:00'),(15,1,13,5,'2018-08-01 09:30:00'),(16,4,12,5,'2018-08-01 10:58:00');
+INSERT INTO `schedule` VALUES (1,2,12,5,'2018-07-31 10:00:00'),(2,1,12,6,'2018-07-31 10:25:00');
 /*!40000 ALTER TABLE `schedule` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,7 +250,7 @@ CREATE TABLE `services` (
   `active` tinyint(1) DEFAULT '1',
   `date_add` datetime DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_service`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -259,7 +259,7 @@ CREATE TABLE `services` (
 
 LOCK TABLES `services` WRITE;
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
-INSERT INTO `services` VALUES (5,'Corte','00:25:00','9EFF84',NULL,1,'2018-07-21 16:00:56'),(6,'Barba','00:05:00','FF8468',NULL,1,'2018-07-21 16:02:35'),(8,'Corte e Barba','00:30:00','FFE851',5,1,'2018-07-28 20:37:24');
+INSERT INTO `services` VALUES (1,'Gonçalo','23:00:00','FFFFFF',NULL,0,'2018-07-21 15:02:19'),(2,'Gonçalo111','06:58:00','blue',NULL,0,'2018-07-21 15:03:05'),(3,'Gonçalo','01:58:00','7B3DFF',NULL,0,'2018-07-21 15:03:31'),(4,'Barba','00:05:00','4DFF44',NULL,0,'2018-07-21 15:42:34'),(5,'Corte','00:25:00','9EFF84',NULL,1,'2018-07-21 16:00:56'),(6,'Barba','00:05:00','FF8468',NULL,1,'2018-07-21 16:02:35'),(7,'Corte','00:45:00','FF7AD4',5,0,'2018-07-25 20:15:35');
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -328,4 +328,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-29 22:30:09
+-- Dump completed on 2018-07-26  4:04:39
