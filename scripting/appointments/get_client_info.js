@@ -30,16 +30,17 @@ function getClients()
 	}
 
 
-	function getAppointmentsBooked(date_selected)
+	function getAppointmentsBooked(date_selected, resource)
 	{
 
 			$.ajax({
 				 type: "POST",
 				 url: "controllers/appointments/read_Appointments.php",
-				 data:{custom_date:date_selected},
+				 data:{custom_date:date_selected, resource:resource},
 			   dataType: 'json',
 				 success: function(data)
 				 {
+
 					 	$('#already-booked').html('');
 				     for (var i = 0; i < data.length; i++)
 				     {
@@ -55,12 +56,13 @@ function getClients()
 
 		}
 
-		function getAppointmentsHoles(date_selected, time_needed)
+		function getAppointmentsHoles(date_selected, time_needed, resource)
 		{
 
 				$.ajax({
 					 type: "POST",
-					 url: "controllers/appointments/find_spot.php?date_selection=" + date_selected + "&timespent=" + time_needed,
+					 url: "controllers/appointments/find_spot.php?date_selection="
+					 + date_selected + "&timespent=" + time_needed + "&resource=" + resource,
 				   dataType: 'json',
 					 success: function(data)
 					 {
@@ -70,6 +72,7 @@ function getClients()
 							 var table_tr = "<tr>"+
 							 								"<td>" + data[i].spot_start + "</td>" +
 							 								"<td>" + data[i].spot_end + "</td>" +
+															"<td>" + data[i].resource_name + "</td>" +
 				    		 							"<td>Usar</td>" + "</tr>";
 									$('#book-spots').append(table_tr);
 					     }
@@ -125,38 +128,62 @@ function getServices()
 
 function getConfirmation(date, time_need, resource)
 {
-var url = "controllers/appointments/confirm_spot.php?date_choice="
-+ date + "&time_need=" + time_need + "&resource=" + resource;
-$.ajax({
 
-	type: "GET",
-	url: url,
-	success: function(data)
+	if(time_need == "none")
 	{
-		if(data == "available")
-		{
-			 swal( 'Livre', 'Não existem marcações.', 'success');
-			 $('#insert_appointment').css('visibility', "visible");
-		}else
-		{
+		buildSwal("Aviso", "Selecione um Serviço.", "error");
+	}
+	else if(resource == "none")
+	{
+		buildSwal("Aviso", "Selecione um Recurso.", "error");
+	}
+	else
+	{
+			var url = "controllers/appointments/confirm_spot.php?date_choice="
+			+ date + "&time_need=" + time_need + "&resource=" + resource;
+			$.ajax({
 
-			 swal({
-				  title: 'Ups!',
-					text: "Já existe marcação para essa hora, quer continuar?",
-	 				type: "warning",
-				  confirmButtonText:  'Sim',
-				  cancelButtonText:  'Não',
-				  showCancelButton: true,
-				  showCloseButton: true,
-				}).then(
-       function () { $('#insert_appointment').css('visibility', "visible");},
-       function () { return false; });
-		}
+				type: "GET",
+				url: url,
+				success: function(data)
+				{
+					if(data == "available")
+					{
+						 swal( 'Livre', 'Não existem marcações.', 'success');
+						 $('#insert_appointment').css('visibility', "visible");
+					}
+					else if(data == "not_available")
+					{
 
+						 swal({
+							  title: 'Ups!',
+								text: "Já existe marcação para essa hora, quer continuar?",
+				 				type: "warning",
+							  confirmButtonText:  'Sim',
+							  cancelButtonText:  'Não',
+							  showCancelButton: true,
+							  showCloseButton: true,
+							}).then(
+			       function () { $('#insert_appointment').css('visibility', "visible");},
+			       function () { return false; });
+						 console.log(data);
+					}
+					else
+					{
+						console.log(data);
+					}
+
+				}
+
+				});
 	}
 
-	});
 
+}
+
+function buildSwal(title, message, type)
+{
+	swal( title, message, type);
 }
 
 function insertAppointment()
@@ -168,24 +195,49 @@ function insertAppointment()
 			var resource = $('#resource-list-choice').val();
 			var cid = $('#cid-code').html();
 
-	 		$.ajax({
+			/* VERIFY FIELDS */
 
-	 			 type: "POST",
-	 			 url: "controllers/appointments/create_appointment.php",
-	 		   data: {cid: cid, sid: sid,rid: resource, datetime: datetime,},
-	 			 success: function(data)
-	 			 {
-					  swal( 'Sucesso', 'Marcação registada.', 'success');
-						setTimeout(function(){
+			if(date.length == 0)
+			{
+				buildSwal("Aviso", "Preencha a Data de Marcação.","error")
+			}
+			else if(hour.length == 0)
+			{
+				buildSwal("Aviso", "Preencha a Hora de Marcação.","error")
+			}
+			else if(sid == 0)
+			{
+				buildSwal("Aviso", "Selecione um Serviço.","error")
+			}
+			else if(resource == "none")
+			{
+				buildSwal("Aviso", "Selecione um Recurso.","error")
+			}
+			else if(cid == "0")
+			{
+				buildSwal("Aviso", "Selecione um Cliente.","error")
+			}
+			else
+			{
+				$.ajax({
 
-							window.location.href="main.php#view=appointments-table";
+					 type: "POST",
+					 url: "controllers/appointments/create_appointment.php",
+					 data: {cid: cid, sid: sid,rid: resource, datetime: datetime,},
+					 success: function(data)
+					 {
+							swal( 'Sucesso', 'Marcação registada.', 'success');
+							setTimeout(function(){
 
-						}, 1500);
-	 			 }
+								window.location.href="main.php#view=appointments-table";
 
-	 		   });
+							}, 1500);
+					 }
 
+					 });
+			}
 }
+
 
 $( document ).ready(function() {
 
@@ -214,7 +266,10 @@ $( document ).ready(function() {
 
 				$('#search-for-client').fadeOut();
 				$('.tab-options ul li[tab-toggle="1"]').html("Cliente");
+				$('.tab[tab-index="2"]').attr('locked', 'no');
 				$('#client-info').fadeIn();
+				$('.tab-options ul li[tab-toggle="2"]').click();
+
 			 }
 
 		 });
@@ -226,10 +281,14 @@ $( document ).ready(function() {
 $('.tab-options ul').on('click', 'li', function()
 {
 		var tab_to_toggle = $(this).attr('tab-toggle');
-		$('.tab-options ul li').removeClass('tab-li-active');
-		$(this).addClass('tab-li-active');
-		$('.tab').removeClass('tab-active');
-		$('.tab[tab-index="'+tab_to_toggle+'"]').addClass('tab-active');
+
+		if($('.tab[tab-index="'+tab_to_toggle+'"]').attr('locked') !== "yes")
+		{
+			$('.tab-options ul li').removeClass('tab-li-active');
+			$(this).addClass('tab-li-active');
+			$('.tab').removeClass('tab-active');
+			$('.tab[tab-index="'+tab_to_toggle+'"]').addClass('tab-active');
+		}
 
 });
 /* TAB - JS END */
@@ -240,8 +299,8 @@ $('#check_availability').on('click', function()
 		var date = $('#date_chosen').val();
 		var hour = $('#time_begin').val();
 		var datetime = date + " " + hour;
-		var time_needed = $('#service-list-choice').val();
-		var resource = $('#resource-list-choice').val();
+		var time_needed = $('#service-list-choice option:selected').val();
+		var resource = $('#resource-list-choice option:selected').val();
 		getConfirmation(datetime, time_needed, resource);
 
 });
@@ -254,14 +313,24 @@ $('#insert_appointment').on('click', function()
 /* DATE CHANGES - GET APPOINTMENTS */
 $('#date_chosen').on('change', function()
 {
+
 	var date_selected = $('#date_chosen').val();
 	var time_needed = $('#service-list-choice option:selected').val();
+	var resource = $('#resource-list-choice option:selected').val();
+
 	if(date_selected.length > 0)
 	{
-		getAppointmentsBooked(date_selected);
-		if(time_needed.length > 0)
+		getAppointmentsBooked(date_selected, resource);
+
+		if(time_needed == "none")
 		{
-			getAppointmentsHoles(date_selected, time_needed);
+				$('#book-spots').html('');
+
+		}
+		else
+		{
+				getAppointmentsHoles(date_selected, time_needed, resource);
+
 		}
 
 	}
@@ -272,13 +341,37 @@ $('#service-list-choice').on('change', function()
 {
 	var date_selected = $('#date_chosen').val();
 	var time_needed = $('#service-list-choice option:selected').val();
-	if(date_selected.length > 0 && time_needed.length > 0)
+	var resource = $('#resource-list-choice option:selected').val();
+	if(date_selected.length > 0 && time_needed != "none")
 	{
-			getAppointmentsHoles(date_selected, time_needed);
+			getAppointmentsHoles(date_selected, time_needed, resource);
+
 	}
 
 });
 
+
+$('#resource-list-choice').on('change', function()
+{
+			var date_selected = $('#date_chosen').val();
+			var time_needed = $('#service-list-choice option:selected').val();
+			var resource = $('#resource-list-choice option:selected').val();
+
+			if(date_selected.length > 0)
+			{
+				getAppointmentsBooked(date_selected, resource);
+
+				if(time_needed != "none")
+				{
+					getAppointmentsHoles(date_selected, time_needed, resource);
+				}
+				else
+				{
+						$('#book-spots').html('');
+				}
+
+			}
+});
 
 
 $('.datepicker').datepicker({

@@ -27,7 +27,7 @@
 
 						<div class="form-input-division">
 							<label for="firstName" class="form-input-label">Nome</label>
-							<label for="firstName" style="display:none" id="cid-code"></label>
+							<label for="firstName" style="display:none" id="cid-code">0</label>
 							<label id="name" class="input-readonly">Carlos Emanuel Carvalho Gonçalves</label>
 						</div>
 
@@ -85,7 +85,7 @@
 			</div>
 			<!-- TAB 1 - END -->
 			<!-- TAB 2 -->
-				<div class="tab" tab-index="2">
+				<div class="tab" tab-index="2" locked="yes">
 
 
 							<div class="large-box">
@@ -95,14 +95,14 @@
 									<div class="medium-large-box full-width">
 											<label for="">Serviço Pretendido</label>
 										<select id="service-list-choice" class="form-input" name="">
-											<option value="" disabled selected> Escolha uma opção</option>
+											<option sid="0" value="none" disabled selected> Escolha uma opção</option>
 										</select>
 									</div>
 										<br>
 									<div class="medium-large-box full-width">
 											<label for="">Recurso Necessário</label>
 										<select id="resource-list-choice" class="form-input" name="">
-											<option value="" disabled selected> Escolha uma opção</option>
+											<option value="none" disabled selected> Escolha uma opção</option>
 										</select>
 									</div>
 
@@ -154,8 +154,9 @@
 												 <table class="table-layout">
 													 <thead>
 														 <tr>
-															 <th>Vaga de</th>
+															 <th>Vaga das</th>
 															 <th>até</th>
+															 <th>Para</th>
 															 <th></th>
 													 	 </tr>
 													 </thead>

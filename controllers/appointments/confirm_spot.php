@@ -5,9 +5,10 @@ require_once '../basedados.php';
 
 
 $date_choice = mysqli_real_escape_string($database, $_GET['date_choice']);
-$time_to_minutes = mysqli_real_escape_string($database, $_GET['time_need']);
+
 $resource = mysqli_real_escape_string($database, $_GET['resource']);
 
+$time_to_minutes = mysqli_real_escape_string($database, $_GET['time_need']);
 $time_explode = explode(':', $time_to_minutes);
 $extract_minutes = ($time_explode[0] * 60.0 + $time_explode[1] * 1.0);
 
@@ -18,8 +19,14 @@ $schedule_query ="SELECT schedule.*, services.time, ADDTIME(schedule.datetime, s
 FROM barbershop.schedule
 LEFT JOIN services
 ON schedule.id_service = services.id_service
-WHERE datetime >= '$date_choice' and datetime < '$date_plus_service_time' and id_resource = '$resource';";
+WHERE datetime >= '$date_choice' and datetime < '$date_plus_service_time'";
 
+  if(isset($_GET['resource']))
+  {
+    $resource = mysqli_real_escape_string($database, $_GET['resource']);
+    $schedule_query .= " and id_resource = '$resource'";
+  }
+  
   $executar_query = mysqli_query($database, $schedule_query);
 
   $result = mysqli_num_rows($executar_query);

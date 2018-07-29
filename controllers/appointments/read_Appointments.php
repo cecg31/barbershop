@@ -11,6 +11,8 @@ if(isset($_POST['custom_date']))
   $operator = " = ";
 }
 
+
+
 $schedule_query ="SELECT schedule.*, clients.name, clients.photo, resources.name as resource_name, services.name as service_name, services.time,ADDTIME(schedule.datetime, services.time) as enddate
 FROM schedule
 LEFT JOIN clients
@@ -19,6 +21,15 @@ LEFT JOIN resources
 ON schedule.id_resource = resources.id_resource
 LEFT JOIN services
 ON schedule.id_service = services.id_service WHERE DATE(schedule.datetime)" . $operator . "'$today_date'";
+
+    if(isset($_POST['resource']))
+    {
+      $resource_id = mysqli_real_escape_string($database, $_POST['resource']);
+      if($resource_id != "none")
+      {
+          $schedule_query .= " AND schedule.id_resource = " . $resource_id;
+      }
+    }
 
   $executar_query = mysqli_query($database, $schedule_query);
 
