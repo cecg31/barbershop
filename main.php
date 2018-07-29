@@ -14,25 +14,24 @@ if(!isset($_SESSION['USERNAME']))
     <title>Gestor de Salão</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+      <!-- FAVICON -->
+    <link rel="shortcut icon" href="graphics/images/favicon.ico" type="image/x-icon" />
+     <!-- CSS LIBRARIES -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="dists/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" type="text/css" href="dists/jquery-clockpicker.min.css">
+    <link rel="stylesheet" href="dists/jquery-clockpicker.css">
+	   <!-- CSS NATIVE -->
     <link rel="stylesheet" type="text/css" href="graphics/styling/sidebar.css?1262">
     <link rel="stylesheet" type="text/css" href="graphics/styling/framework.css?87234">
     <link rel="stylesheet" type="text/css" href="graphics/styling/agenda.css?651">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.css">
-    <link rel="shortcut icon" href="graphics/images/favicon.ico" type="image/x-icon" />	
-    <link rel="stylesheet" type="text/css" href="graphics/styling/jquery-clockpicker.min.css">
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="dists/jquery-clockpicker.css">
-    <!------ Include the above in your HEAD tag ---------->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.pt.min.js"></script>
-    <!--jconfirm cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
-    <script src="dists/jquery-clockpicker.js"></script>
+
 </head>
 <body>
 
@@ -134,23 +133,15 @@ if(!isset($_SESSION['USERNAME']))
     <!-- /#page-wrapper -->
 
 
-
-    <script src="js/sidebar.js"></script>
-      <script src="scripting/menu.js"></script>
-    <script src="dists/moment.js"></script>
-    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyAg_SrfP-HmwjHgiqLrB6i7ONe6KYmoqgQ"></script>
-    <!-- HIGHCHARTS -->
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-
+    <!-- SCRIPTS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <script src="scripting/menu.js"></script>
+    <script src="dists/moment.js"></script>
+    <script src="dists/jquery-clockpicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.pt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/sweetalert2/6.6.0/sweetalert2.min.js"></script>
-    <script type="text/javascript">
 
-    </script>
 </body>
 
 </html>

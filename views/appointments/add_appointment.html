@@ -13,7 +13,7 @@
 		</div>
 
 		<div class="tab-list">
-
+				<!-- TAB 1 -->
 				<div class="tab tab-active" tab-index="1">
 							<br>
 					<div id="client-info" style="display:none">
@@ -83,7 +83,8 @@
 					</div>
 
 			</div>
-
+			<!-- TAB 1 - END -->
+			<!-- TAB 2 -->
 				<div class="tab" tab-index="2">
 
 
@@ -109,7 +110,7 @@
 							<div class="small-medium-box">
 										<div class="medium-large-box">
 												<label for="">Data da Marcação</label>
-												<input type="text" id="date_chosen"class="datepicker form-input"/>
+												<input type="text" id="date_chosen" class="datepicker form-input"/>
 										</div>
 										<br>
 										<div class="medium-box">
@@ -131,11 +132,45 @@
 										<input type="button" style="visibility:hidden;" id="insert_appointment" class="button check-btn" name="" value="Fazer Marcação">
 								</div>
 
+								<hr>
+
+									<div class="large-box">
+											<div class="medium-box">
+												 <table class="table-layout">
+													 <thead>
+														 <tr>
+															 <th>Responsável</th>
+															 <th>Inicio</th>
+															 <th>Fim</th>
+													 	 </tr>
+													 </thead>
+
+													<tbody id="already-booked">
+
+													</tbody>
+												 </table>
+											</div>
+											<div class="medium-box">
+												 <table class="table-layout">
+													 <thead>
+														 <tr>
+															 <th>Vaga de</th>
+															 <th>até</th>
+															 <th></th>
+													 	 </tr>
+													 </thead>
+
+													<tbody id="book-spots">
+
+													</tbody>
+												 </table>
+											</div>
+									</div>
 
 						</div>
 
-
 				 </div>
+				 <!-- TAB 2 - END -->
 
 		</div>
 
@@ -144,11 +179,4 @@
 </div>
 </form>
 
-
-<script src="dists/jscolor.js"></script>
 <script src="scripting/appointments/get_client_info.js"></script>
-<script type="text/javascript">
-
-
-
-</script>

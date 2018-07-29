@@ -1,11 +1,12 @@
 <?php
 
-
 require_once '../basedados.php';
+
+$date_appointment = $_GET['date_selection'];
 
 $schedule_query ="SELECT schedule.*, services.time, ADDTIME(schedule.datetime, services.time) as enddate
 FROM barbershop.schedule
-LEFT JOIN services ON schedule.id_service = services.id_service  order by datetime;";
+LEFT JOIN services ON schedule.id_service = services.id_service WHERE DATE(schedule.datetime) = '$date_appointment'  order by datetime;";
 
   $executar_query = mysqli_query($database, $schedule_query);
 
@@ -19,12 +20,15 @@ LEFT JOIN services ON schedule.id_service = services.id_service  order by dateti
       			  $appointment['time_need'] = $row['time'];
               array_push($schedule_data, $appointment);
             }
-
-
                 $spots_available = array();
-                $time_needed = $_GET['timespent'];
-                $opening_hour = strtotime("2018-07-31 07:00:00.0");
-                $closing_hour = strtotime("2018-07-31 23:59:00.0");
+
+                //GET MINUTES OUT
+                $time_to_minutes= $_GET['timespent'];
+                $time_explode = explode(':', $time_to_minutes);
+                $time_needed = ($time_explode[0] * 60.0 + $time_explode[1] * 1.0);
+
+                $opening_hour = strtotime($date_appointment . " 07:00:00.0");
+                $closing_hour = strtotime($date_appointment . " 23:59:00.0");
                 $appoint_plus_opening = strtotime('+' . $time_needed . ' minutes', $opening_hour);
                 $first_appoint = $schedule_data[0]['schedule_date'];
                 $last_appoint = $schedule_data[sizeof($schedule_data) - 1]['schedule_date'];
@@ -47,9 +51,13 @@ LEFT JOIN services ON schedule.id_service = services.id_service  order by dateti
                $j = $i + 1;
                $appoint_end = $schedule_data[$i]['end_date'];
 
-               if ($i + 1 < sizeof($schedule_data))
+               if (isset($schedule_data[$j]))
                {
                   $appoint_next = $schedule_data[$j]['schedule_date'];
+               }
+               else
+               {
+                  $appoint_next = $closing_hour;
                }
                $temp_appoint_date = strtotime('+' . $time_needed . ' minutes',strtotime($appoint_end));
 
@@ -57,8 +65,8 @@ LEFT JOIN services ON schedule.id_service = services.id_service  order by dateti
                {
                  //echo "vaga às " . $appoint_end . "<br>";
                  $spot = array();
-                 $spot['spot_start'] = date('Y-m-d H:i', strtotime($appoint_end));
-                 $spot['spot_end'] = date('Y-m-d H:i', strtotime($appoint_next));
+                 $spot['spot_start'] = date('H:i', strtotime($appoint_end));
+                 $spot['spot_end'] = date('H:i', strtotime($appoint_next));
                  array_push($spots_available, $spot);
                }
 
