@@ -73,28 +73,28 @@ if(!isset($_SESSION['USERNAME']))
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav side-nav">
                <li>   <!-- CLIENTS -->
-                   <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/contacts.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <label data-toggle="collapse" data-target="#submenu-1"> <img class="sidebar-icon" src="graphics/icons/list.png" alt=""> Clientes <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-1" class="collapse">
                        <li><label class="link-url" hashlink="addclient"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Adicionar cliente</label></li>
                        <li><label class="link-url" hashlink="view-clients"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Clientes</label></li>
                    </ul>
                </li>
                <li> <!-- RESOURCES -->
-                   <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/network.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <label  data-toggle="collapse" data-target="#submenu-2"> <img class="sidebar-icon" src="graphics/icons/customer.png" alt=""> Recursos <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-2" class="collapse">
                        <li><label class="link-url" hashlink="add_resources"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Recurso</label></li>
                        <li><label class="link-url" hashlink="view_resources"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Recursos</label></li>
                    </ul>
                </li>
                <li> <!-- SERVICES -->
-                   <label  data-toggle="collapse" data-target="#submenu-3"> <img class="sidebar-icon" src="graphics/icons/scissors.png" alt=""> Serviços <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <label  data-toggle="collapse" data-target="#submenu-3"> <img class="sidebar-icon" src="graphics/icons/pet.png" alt=""> Serviços <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-3" class="collapse">
                        <li><label class="link-url" hashlink="add_services"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Novo Serviço</label></li>
                        <li><label class="link-url" hashlink="view_services"><img class="sidebar-li-icon" src="graphics/icons/bullet-list.png" alt=""> Ver Serviços</label></li>
                    </ul>
                </li>
                <li> <!-- APPOINTMENTS -->
-                   <label data-toggle="collapse" data-target="#submenu-4"><img class="sidebar-icon" src="graphics/icons/push-pin.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
+                   <label data-toggle="collapse" data-target="#submenu-4"><img class="sidebar-icon" src="graphics/icons/maps-and-location2.png" alt=""> Marcações <i class="fa fa-fw fa-angle-down pull-right"></i></label>
                    <ul id="submenu-4" class="collapse">
                        <li><label class="link-url" hashlink="add_appointment"><img class="sidebar-li-icon" src="graphics/icons/add.png" alt=""> Nova Marcação</label></li>
                        <li><label class="link-url" hashlink="dashboard"><img class="sidebar-li-icon" src="graphics/icons/time.png" alt=""> Encontrar Vaga</label></li>
@@ -105,7 +105,7 @@ if(!isset($_SESSION['USERNAME']))
                    <label class="link-url" hashlink="appointments"><img class="sidebar-icon" src="graphics/icons/calendar.png" alt=""> Agenda Semanal</label>
                </li>
                <li> <!-- PARAMETERS -->
-                   <label class="link-url"><img class="sidebar-icon" src="graphics/icons/settings.png" alt=""> Parâmetros</label>
+                   <label class="link-url"><img class="sidebar-icon" src="graphics/icons/wrench.png" alt=""> Parâmetros</label>
                </li>
            </ul>
         </div>

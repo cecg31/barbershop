@@ -12,28 +12,35 @@
 
 .table-layout tbody tr:hover
 {
-	cursor: pointer;
 	background-color: #c9e0ef !important ;
 }
 
 .table-layout thead th:first-child
 {
-	border-top-left-radius: 5px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 }
 
 .table-layout thead th:last-child
 {
-	border-top-right-radius: 5px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.table-layout thead
+{
+
+	color: white;
 }
 
 .table-layout thead th
 {
+	padding: 5px 5px;
 	text-align: center;
-	background-color: #2f5659;
-	padding: 10px 5px;
-	color: white;
-
+	background-color: #0C6168;
 }
+
+
 
 .table-layout tbody td
 {
@@ -49,4 +56,10 @@
 .selected
 {
 	background-color: rgb(1, 118, 161) !important;
+}
+
+.table-layout tbody td img
+{
+	cursor: pointer;
+	
 }

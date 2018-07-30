@@ -23,7 +23,7 @@ $( document ).ready(function() {
 										"<td>"+ data[i].client_phone +"</td> "+
 										"<td>"+ data[i].client_nif +"</td> "+
 										"<td>"+ data[i].client_notification +"</td> "+
-										"<td><img src='graphics/icons/edit.png' width='24px' alt='edit'></td> "+
+										"<td><img src='graphics/icons/useredit.png' width='24px' alt='edit'></td> "+
 					 				"</tr>";
 
 					$('#data').append(table_tr);
@@ -41,7 +41,7 @@ $( document ).ready(function() {
 		var id_client = $(this).attr('clientcode');
 		window.location.hash = 'view=edit-client&id_client='+id_client;
 	})
-	
+
 	$("#search").keyup(function () {
 	    var value = this.value.toLowerCase().trim();
 

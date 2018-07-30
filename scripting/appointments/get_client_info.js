@@ -18,8 +18,6 @@ function getClients()
 										"<td>"+ data[i].client_email +"</td> "+
 										"<td>"+ data[i].client_phone +"</td> "+
 										"<td>"+ data[i].client_nif +"</td> "+
-										"<td>"+ data[i].client_notification +"</td> "+
-										"<td><img src='graphics/icons/edit.png' width='24px' alt='edit'></td> " +
 					 				"</tr>";
 							$('#data').append(table_tr);
 			     }
