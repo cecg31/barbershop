@@ -118,7 +118,7 @@
     .side-nav>li>label {
         width: 225px;
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-        color: #9d9d9d;
+        color: #d7d7d7;
         border-bottom: 1px rgba(0,0,0,.1) solid;
         padding: 10px 15px;
         font-weight: normal;
@@ -147,7 +147,7 @@
     cursor: pointer;
     /*color: #999;*/
     font-weight: normal;
-    color: #dbdbdb ;
+    color: #d7d7d7 ;
 }
 
 .side-nav>li>ul>li>label:hover {
