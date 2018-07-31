@@ -20,7 +20,13 @@ function requestLogin()
        }
   	   else
        {
-  		   alert(data); //limpar campos depois do alert
+         swal( 'Ups!', 'Verifique os seus dados.', 'warning');
+
+             setTimeout(function(){
+
+               window.location.href="main.php#view=dashboard";
+
+             }, 1500);
   	   }
 
      }
