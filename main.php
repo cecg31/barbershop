@@ -104,9 +104,9 @@ if(!isset($_SESSION['USERNAME']))
                <li> <!-- CALENDAR WIDGET -->
                    <label class="link-url" hashlink="appointments"><img class="sidebar-icon" src="graphics/icons/calendar.png" alt=""> Agenda Semanal</label>
                </li>
-               <li> <!-- PARAMETERS -->
+               <!--<li>  PARAMETERS
                    <label class="link-url"><img class="sidebar-icon" src="graphics/icons/wrench.png" alt=""> Parâmetros</label>
-               </li>
+               </li> -->
            </ul>
         </div>
         <!-- /.navbar-collapse -->
