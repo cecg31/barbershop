@@ -4,11 +4,11 @@
 require_once '../basedados.php';
 
 $today_date =  date("Y/m/d H:i:s");
-$operator = " >= ";
+$operator = " schedule.datetime >= ";
 if(isset($_POST['custom_date']))
 {
   $today_date = mysqli_real_escape_string($database, $_POST['custom_date']);
-  $operator = " = ";
+  $operator = " DATE(schedule.datetime) = ";
 }
 
 
@@ -20,7 +20,7 @@ ON schedule.id_client = clients.id_client
 LEFT JOIN resources
 ON schedule.id_resource = resources.id_resource
 LEFT JOIN services
-ON schedule.id_service = services.id_service WHERE DATE(schedule.datetime)" . $operator . "'$today_date'";
+ON schedule.id_service = services.id_service WHERE " . $operator . "'$today_date'";
 
     if(isset($_POST['resource']))
     {
