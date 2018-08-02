@@ -49,7 +49,7 @@ if(!isset($_SESSION['USERNAME']))
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" >
-                <img class="link-url" hashlink="dashboard" style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/devmaV7.png" alt="LOGO">
+                <img class="link-url" hashlink="dashboard" style="display:inline-block; width: 40px; border-radius: 25px;  cursor: pointer;" src="graphics/images/devmaicon.png" alt="LOGO">
                 <p>DEVMA Soft. - Barbearia Amorim  </p>
             </a>
         </div>
