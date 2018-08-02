@@ -118,7 +118,7 @@ if(!isset($_SESSION['USERNAME']))
             <div class="row" id="main" >
 
                 <div class="col-sm-12 col-md-12 well" >
-                  <h3 id="head-title">Registar Cliente</h3>
+                  <h3 id="head-title">Dashboard</h3><input type="text" id="search" class="form-input" placeholder="Pesquisar">
                   <hr class="title-break">
                   <div class="" id="content">
 

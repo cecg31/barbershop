@@ -49,24 +49,28 @@ function changedURL()
    {
 
       case 'dashboard':
+      $('#search').fadeOut();
       $('#content').load('views/dashboard.html');
       $('#head-title').html('Dashboard');
       $('#main').fadeIn();
       break;
 
       case 'addclient':
+      $('#search').fadeOut();
       $('#content').load('views/clients/add_client.html');
       $('#head-title').html('Registar Cliente');
       $('#main').fadeIn();
       break;
 
   	  case 'view-clients':
+      $('#search').fadeIn();
   	  $('#content').load('views/clients/view_clients.html');
       $('#head-title').html('Clientes');
       $('#main').fadeIn();
   	  break;
 
 	  case 'edit-client':
+    $('#search').fadeOut();
 	  $('#content').load('views/clients/edit_client.html');
 	  $('#head-title').html('Editar Dados');
 	  $('#main').fadeIn();
@@ -76,54 +80,63 @@ function changedURL()
 	  $('#content').load('views/resources/add_resources.html');
 	  $('#head-title').html('Adicionar Recursos');
 	  $('#main').fadeIn();
+    $('#search').fadeOut();
 	  break;
 
 	  case 'view_resources':
 	  $('#content').load('views/resources/view_resources.html');
 	  $('#head-title').html('Recursos');
 	  $('#main').fadeIn();
+    $('#search').fadeIn();
 	  break;
 
 	  case 'edit_resources':
 	  $('#content').load('views/resources/edit_resources.html');
 	  $('#head-title').html('Editar Recursos');
 	  $('#main').fadeIn();
+    $('#search').fadeOut();
 	  break;
 
 	  case 'add_services':
 	  $('#content').load('views/services/add_services.html');
 	  $('#head-title').html('Adicionar Serviços');
 	  $('#main').fadeIn();
+    $('#search').fadeOut();
 	  break;
 
 	  case 'view_services':
 	  $('#content').load('views/services/view_services.html');
 	  $('#head-title').html('Serviços');
 	  $('#main').fadeIn();
+    $('#search').fadeIn();
 	  break;
 
 	  case 'edit_services':
 	  $('#content').load('views/services/edit_services.html');
 	  $('#head-title').html('Editar Serviços');
 	  $('#main').fadeIn();
+    $('#search').fadeOut();
 	  break;
 
       case 'add_appointment':
       $('#content').load('views/appointments/add_appointment.html');
       $('#head-title').html('Nova Marcação');
       $('#main').fadeIn();
+      $('#search').fadeOut();
       break;
 
       case 'appointments-table':
       $('#content').load('views/appointments/view_appointments.html');
       $('#head-title').html('Marcações');
       $('#main').fadeIn();
+      $('#search').fadeIn();
       break;
 
 	  case 'appointments':
         $('#content').load('views/agenda.html');
         $('#head-title').html('Agenda Semanal');
         $('#main').fadeIn();
+        $('#search').fadeOut();
       break;
 
     case 'logout':
